@@ -347,7 +347,10 @@ function localizeDocument(language) {
   });
 
   document.documentElement.lang = language;
-  document.title = translated("Acesso em Foco - Análise de Acessibilidade", language);
+  const titleElement = document.querySelector("title");
+  const titleLanguage = language === DEFAULT_LANGUAGE ? "pt" : language;
+  document.title = titleElement?.getAttribute(`data-title-${titleLanguage}`)
+    || translated("Acesso em Foco - Análise de Acessibilidade", language);
   document.querySelector('meta[name="description"]')?.setAttribute("content", translated("Apresentação acadêmica sobre análise de acessibilidade em aplicativos móveis com ferramentas de inspeção de acessibilidade.", language));
 }
 
