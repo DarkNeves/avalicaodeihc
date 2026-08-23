@@ -1,0 +1,22 @@
+A lista a seguir contém oportunidades de melhoria na acessibilidade de Uber. Cada item corresponde a uma área delineada na captura de tela anexa.
+
+Área de toque
+[0,2192][1080,2298]
+Considere aumentar este item clicável.
+A altura deste item é 38dp. Considere definir a altura desta área de toque como 48dp ou maior.
+
+Contraste da imagem
+com.ubercab:id/primary_end_image
+Considere aumentar a taxa de contraste entre o primeiro plano e o plano de fundo dessa imagem.
+A taxa de contraste da imagem é 2,75. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #5D5D5D e da cor de fundo #161616. Considere aumentar essa taxa para 3,00 ou mais.
+
+Contraste da imagem
+com.ubercab:id/primary_end_image
+Considere aumentar a taxa de contraste entre o primeiro plano e o plano de fundo dessa imagem.
+A taxa de contraste da imagem é 2,75. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #5D5D5D e da cor de fundo #161616. Considere aumentar essa taxa para 3,00 ou mais.
+
+Tipo de item não aceito
+[0,1217][1080,1858]
+O tipo deste item pode não ser compatível.
+O tipo deste item com.uber.rib.core.compose.root.UberComposeView pode não ser processado pelos serviços de acessibilidade. Use um tipo definido pelo SDK do Android.
+

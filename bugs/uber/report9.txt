@@ -1,0 +1,7 @@
+A lista a seguir contém oportunidades de melhoria na acessibilidade de Uber. Cada item corresponde a uma área delineada na captura de tela anexa.
+
+Tipo de item não aceito
+[0,105][1080,2298]
+O tipo deste item pode não ser compatível.
+O tipo deste item com.uber.rib.core.compose.root.UberComposeView pode não ser processado pelos serviços de acessibilidade. Use um tipo definido pelo SDK do Android.
+

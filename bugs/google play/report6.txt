@@ -1,0 +1,26 @@
+A lista a seguir contém oportunidades de melhoria na acessibilidade de Google Play Store. Cada item corresponde a uma área delineada na captura de tela anexa.
+
+Itens clicáveis
+[877,117][1012,252]
+Vários itens clicável compartilham este local na tela.
+Este item clicável tem o mesmo local na tela ([877,117][1012,252]) que outros 1 itens com essas propriedades. Elementos conflitantes: View with bounds: [877,117][1012,252].
+
+Rótulo do item
+[0,2117][1080,2118]
+O rótulo deste item pode não ser lido por leitores de tela.
+
+Texto oculto
+[68,443][1013,1152]
+Possível texto detectado: LFoR
+Garanta que o rótulo de acessibilidade deste item inclua o texto visível.
+
+Texto oculto
+[68,443][1013,1152]
+Possível texto detectado: SALE
+Garanta que o rótulo de acessibilidade deste item inclua o texto visível.
+
+Texto oculto
+[51,1863][1030,2117]
+Possível texto detectado: Toki: Agenda com lA e Tarefas
+Garanta que o rótulo de acessibilidade deste item inclua o texto visível.
+

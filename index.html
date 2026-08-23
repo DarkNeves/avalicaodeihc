@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Apresentação acadêmica sobre avaliação de IHC - Instagram.">
+  <title>Interfaces Humano-Computador - Avaliação da IHC</title>
+  <script>
+    try {
+      const savedSettings = JSON.parse(localStorage.getItem("farolAccessibilitySettings") ?? "{}");
+      if (savedSettings.theme === "dark") document.documentElement.dataset.theme = "dark";
+    } catch { }
+    document.documentElement.classList.add("splash-active");
+  </script>
+  <link rel="icon" href="./projeto_referencia/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./projeto_referencia/libs/lenis/lenis.css">
+  <link rel="stylesheet" href="./projeto_referencia/css/style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="./projeto_referencia/libs/lenis/lenis.min.js" defer></script>
+  <script type="module" src="./projeto_referencia/js/main.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body id="topo">
+  <div class="splash-screen" id="splash-screen" aria-hidden="true">
+    <img class="splash-animation" src="./projeto_referencia/img/animacao.svg" width="500" height="500" alt="">
+  </div>
+  <a class="pular-conteudo" href="#main-content">Pular para o conteúdo principal</a>
+
+  <!-- SEÇÃO 1 – HERO / CAPA -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#topo" aria-label="Avaliação da IHC - voltar ao início">
+        <img src="./projeto_referencia/img/logo-ifrr.png" width="132" height="175" alt="">
+        <span class="brand-text"><strong>Interfaces Humano-Computador</strong><span>Avaliação da IHC</span></span>
+      </a>
+      <button class="botao-menu" id="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span>Menu</span><span class="icone-menu" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" id="menu-principal" aria-label="Navegação principal">
+        <ul>
+          <li class="desktop-settings-item"><button class="settings-trigger" id="open-settings-desktop" data-settings-trigger type="button" aria-controls="settings-panel" aria-expanded="false"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"></path><circle cx="16" cy="7" r="2"></circle><circle cx="8" cy="17" r="2"></circle></svg> Configurar site</button></li>
+          <li><a href="#topo">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#metodologia">Metodologia</a></li>
+          <li><a href="#tarefas">Tarefas</a></li>
+          <li><a href="#percurso">Avaliação</a></li>
+          <li><a href="#resultados">Resultados</a></li>
+          <li><a href="#analise">Análise</a></li>
+          <li><a href="#conclusao">Conclusão</a></li>
+        </ul>
+      </nav>
+      <div class="header-tools">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Ativar tema escuro">
+          <svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z"></path></svg>
+          <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+        </button>
+      </div>
+    </div>
+    <button class="settings-tab-trigger" id="open-settings-mobile" data-settings-trigger type="button" aria-controls="settings-panel" aria-expanded="false">
+      <span>Configuração</span>
+      <svg class="settings-tab-chevron" aria-hidden="true" viewBox="0 0 24 24"><path d="m7 9 5 5 5-5"></path></svg>
+    </button>
+    <div class="settings-panel" id="settings-panel" hidden>
+      <div class="settings-panel-clip">
+        <section class="settings-panel-surface" aria-labelledby="settings-title" aria-describedby="settings-description" data-lenis-prevent>
+          <div class="settings-header">
+            <div><p class="eyebrow">Preferências de leitura</p><h2 id="settings-title">Configurar site</h2></div>
+            <button class="settings-close" id="close-settings" type="button" aria-label="Fechar configurações"><span aria-hidden="true">×</span></button>
+          </div>
+          <p id="settings-description">Ajuste a apresentação conforme sua necessidade. As escolhas ficam salvas neste navegador.</p>
+          <div class="settings-content">
+            <section class="settings-group" aria-labelledby="text-size-title">
+              <div><h3 id="text-size-title">Tamanho do texto</h3><p id="text-size-status" aria-live="polite">Padrão - 100%</p></div>
+              <div class="text-size-actions">
+                <button type="button" id="text-decrease" aria-label="Diminuir tamanho do texto">A<span aria-hidden="true">−</span></button>
+                <button type="button" id="text-reset">Padrão</button>
+                <button type="button" id="text-increase" aria-label="Aumentar tamanho do texto">A<span aria-hidden="true">+</span></button>
+              </div>
+            </section>
+            <div class="toggle-list">
+              <label class="toggle-option"><span><b>Contraste reforçado</b><small>Aprofunda a diferença entre textos e superfícies.</small></span><input type="checkbox" id="enhanced-contrast"><i aria-hidden="true"></i></label>
+              <label class="toggle-option"><span><b>Alto contraste</b><small>Aplica uma combinação máxima de preto, branco e amarelo.</small></span><input type="checkbox" id="high-contrast"><i aria-hidden="true"></i></label>
+              <label class="toggle-option"><span><b>Maior espaçamento de texto</b><small>Aumenta altura das linhas e distância entre caracteres.</small></span><input type="checkbox" id="text-spacing"><i aria-hidden="true"></i></label>
+              <label class="toggle-option"><span><b>Destacar links</b><small>Reforça sublinhado e identificação dos links de texto.</small></span><input type="checkbox" id="highlight-links"><i aria-hidden="true"></i></label>
+              <label class="toggle-option"><span><b>Scroll suave</b><small>Suaviza a rolagem entre as áreas da página.</small></span><input type="checkbox" id="smooth-scroll"><i aria-hidden="true"></i></label>
+            </div>
+          </div>
+          <div class="settings-footer">
+            <button class="button button-secondary" id="restore-settings" type="button">Restaurar padrão</button>
+            <button class="button button-primary" id="apply-settings" type="button">Concluir</button>
+          </div>
+          <p class="sr-only" id="settings-announcement" aria-live="polite"></p>
+        </section>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-text reveal">
+            <p class="eyebrow">Interfaces Humano-Computador</p>
+            <h1>Aula 06 – Avaliação da IHC</h1>
+            <p class="lead">Planejamento e Aplicação de Avaliação de Interface. Sistema avaliado: <strong>Instagram</strong>.</p>
+            
+            <div class="team-section">
+              <div class="members-grid">
+                <div class="team-member"><span class="member-label">Integrante 1</span><strong contenteditable="true">Andreia</strong></div>
+                <div class="team-member"><span class="member-label">Integrante 2</span><strong contenteditable="true">Israel</strong></div>
+                <div class="team-member"><span class="member-label">Integrante 3</span><strong contenteditable="true">Kelly</strong></div>
+                <div class="team-member"><span class="member-label">Integrante 4</span><strong contenteditable="true">Murilo</strong></div>
+              </div>
+              <div class="hero-meta">
+                <div class="meta-item"><span class="member-label">Professor</span><strong contenteditable="true">Ricardo Jacauna</strong></div>
+                <div class="meta-item"><span class="member-label">Turma</span><strong contenteditable="true">MOD 4 - NOTURNO</strong></div>
+                <div class="meta-item date-item"><span class="member-label">Apresentação</span><strong contenteditable="true">26/08/2026</strong></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="hero-visual reveal">
+            <svg class="ihc-illustration" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Interface/Browser Window -->
+              <rect x="40" y="80" width="320" height="220" rx="12" fill="var(--surface-soft)" stroke="var(--border)" stroke-width="4"/>
+              <!-- Window Header -->
+              <path d="M40 92 C40 85.373 45.373 80 52 80 L348 80 C354.627 80 360 85.373 360 92 L360 110 L40 110 L40 92 Z" fill="var(--border)" opacity="0.3"/>
+              <circle cx="60" cy="95" r="4" fill="var(--border)"/>
+              <circle cx="75" cy="95" r="4" fill="var(--border)"/>
+              <circle cx="90" cy="95" r="4" fill="var(--border)"/>
+              
+              <!-- Content elements -->
+              <rect x="70" y="140" width="120" height="16" rx="4" fill="var(--green)" opacity="0.2"/>
+              <rect x="70" y="170" width="220" height="8" rx="4" fill="var(--border)"/>
+              <rect x="70" y="190" width="180" height="8" rx="4" fill="var(--border)"/>
+              <rect x="70" y="210" width="200" height="8" rx="4" fill="var(--border)"/>
+              
+              <!-- Evaluation Overlay (Magnifying glass / chart) -->
+              <g transform="translate(200, 150)">
+                <rect x="0" y="0" width="130" height="110" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="4" filter="drop-shadow(0 10px 15px rgba(0,0,0,0.05))"/>
+                <rect x="20" y="25" width="20" height="60" rx="4" fill="var(--green-light)"/>
+                <rect x="55" y="45" width="20" height="40" rx="4" fill="var(--green)"/>
+                <rect x="90" y="15" width="20" height="70" rx="4" fill="var(--lime)"/>
+              </g>
+              
+              <!-- Cursor -->
+              <g transform="translate(160, 220)">
+                <circle cx="0" cy="0" r="25" fill="var(--green)" opacity="0.1"/>
+                <circle cx="0" cy="0" r="35" fill="none" stroke="var(--green)" stroke-width="2" stroke-dasharray="4 4"/>
+                <path d="M0 0 L12 20 L5 22 L8 32 L1 34 L-2 24 L-10 28 Z" fill="var(--surface)" stroke="var(--text)" stroke-width="2" stroke-linejoin="round"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2 – SOBRE A AVALIAÇÃO -->
+    <section id="sobre" class="section section-soft">
+      <div class="container narrow">
+        <div class="section-heading center reveal">
+          <p class="eyebrow">Objetivo</p>
+          <h2>Sobre a Avaliação</h2>
+          <p>Avaliar a facilidade de uso da interface do Instagram durante a realização de tarefas comuns, verificando a eficiência da navegação, a facilidade para localizar funções, a ocorrência de erros, o tempo necessário para concluir cada tarefa e a percepção de facilidade durante a interação.</p>
+        </div>
+        <div class="indicators-row reveal">
+          <div class="card">
+            <h3>5</h3>
+            <p>Participantes</p>
+          </div>
+          <div class="card">
+            <h3>4</h3>
+            <p>Tarefas</p>
+          </div>
+          <div class="card">
+            <h3>20</h3>
+            <p>Execuções</p>
+          </div>
+          <div class="card">
+            <h3>7</h3>
+            <p>Registros visuais</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3 – METODOLOGIA -->
+    <section id="metodologia" class="section section-dark">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <p class="eyebrow">Como avaliamos</p>
+          <h2>Metodologia</h2>
+          <p>A avaliação utiliza teste de usabilidade com tarefas específicas e observação da interação.</p>
+        </div>
+        <div class="grid-2 reveal">
+          <div class="card">
+            <h3>Métricas Objetivas</h3>
+            <ul>
+              <li>Tempo necessário para concluir cada tarefa;</li>
+              <li>Quantidade de erros durante a execução;</li>
+              <li>Conclusão ou não da tarefa;</li>
+              <li>Taxa de conclusão.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Métricas Subjetivas</h3>
+            <ul>
+              <li>Facilidade percebida, em escala de 1 a 5;</li>
+              <li>Satisfação geral;</li>
+              <li>Observações sobre dificuldades encontradas.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 4 – TAREFAS -->
+    <section id="tarefas" class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">O que foi testado</p>
+          <h2>Tarefas Propostas</h2>
+          <p>O teste englobou quatro cenários essenciais do uso do Instagram.</p>
+        </div>
+        <div class="tasks-grid reveal">
+          <div class="task-card">
+            <span class="task-num">01</span>
+            <div class="task-card-content">
+              <h3>Busca de perfil</h3>
+              <p>Partindo da tela inicial do Instagram, utilizar a ferramenta de busca para pesquisar o perfil definido para o teste e abrir o perfil correspondente.</p>
+            </div>
+          </div>
+          <div class="task-card">
+            <span class="task-num">02</span>
+            <div class="task-card-content">
+              <h3>Informações do perfil</h3>
+              <p>Localizar o perfil pela busca, abri-lo e identificar as informações principais apresentadas na página do perfil, incluindo a biografia.</p>
+            </div>
+          </div>
+          <div class="task-card">
+            <span class="task-num">03</span>
+            <div class="task-card-content">
+              <h3>Nova publicação</h3>
+              <p>Iniciar o processo de criação de uma nova publicação e chegar até a tela de seleção de mídia. Nenhuma publicação precisa ser efetivamente realizada.</p>
+            </div>
+          </div>
+          <div class="task-card">
+            <span class="task-num">04</span>
+            <div class="task-card-content">
+              <h3>Privacidade</h3>
+              <p>Acessar as opções do aplicativo e localizar a área relacionada à privacidade da conta.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 5 – PERCURSO VISUAL / PRINTS -->
+    <section id="percurso" class="section section-soft">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Fluxo da Avaliação</p>
+          <h2>Percurso Visual</h2>
+          <p>Início → Busca → Resultado → Perfil → Publicação → Configurações → Privacidade</p>
+        </div>
+        
+        <div class="visual-timeline">
+          <!-- 1 -->
+          <div class="visual-item card reveal">
+            <div class="visual-img-container" role="button" tabindex="0" aria-label="Ampliar imagem da tela inicial do Instagram">
+              <img src="prints das telas/Tela inicial.png" alt="Tela inicial do Instagram utilizada como ponto de partida do teste">
+            </div>
+            <div class="visual-info">
+              <span class="eyebrow">Etapa 01</span>
+              <h3>Tela Inicial</h3>
+              <p>Figura 1 – Tela inicial do Instagram utilizada como ponto de partida dos testes.</p>
+              <p><strong>Ação:</strong> Início do teste a partir da tela principal.</p>
+              <div class="theory-tags" style="margin-top: 1rem;">
+                <span class="theory-tag">Condução</span>
+                <span class="theory-tag">Legibilidade</span>
+              </div>
+              <button class="visual-expand-button" type="button" aria-label="Ampliar imagem da tela inicial do Instagram">Ampliar imagem</button>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="visual-item card reveal">
+            <div class="visual-img-container" role="button" tabindex="0" aria-label="Ampliar imagem da tela de busca do Instagram">
+              <img src="prints das telas/Tela de busca.png" alt="Tela de busca do Instagram com campo para localizar um perfil">
+            </div>
+            <div class="visual-info">
+              <span class="eyebrow">Etapa 02</span>
+              <h3>Busca</h3>
+              <p>Figura 2 – Tela de busca utilizada para localizar o perfil durante a avaliação.</p>
+              <p><strong>Ação:</strong> Acesso à ferramenta de busca para localizar o perfil.</p>
+              <div class="theory-tags" style="margin-top: 1rem;">
+                <span class="theory-tag">Condução</span>
+                <span class="theory-tag">Significação dos elementos</span>
+              </div>
+              <button class="visual-expand-button" type="button" aria-label="Ampliar imagem da tela de busca do Instagram">Ampliar imagem</button>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="visual-item card reveal">
+            <div class="visual-img-container" role="button" tabindex="0" aria-label="Ampliar imagem do resultado da busca no Instagram">
+              <img src="prints das telas/Tela do resultado da busca.png" alt="Tela do Instagram exibindo o perfil localizado no resultado da busca">
+            </div>
+            <div class="visual-info">
+              <span class="eyebrow">Etapa 03</span>
+              <h3>Resultado da busca</h3>
+              <p>Figura 3 – Resultado apresentado após a realização da busca.</p>
+              <p><strong>Ação:</strong> Exibição do perfil procurado na lista de resultados.</p>
+              <div class="theory-tags" style="margin-top: 1rem;">
+                <span class="theory-tag">Feedback</span>
+                <span class="theory-tag">Eficiência</span>
+              </div>
+              <button class="visual-expand-button" type="button" aria-label="Ampliar imagem do resultado da busca no Instagram">Ampliar imagem</button>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="visual-item card reveal">
+            <div class="visual-img-container" role="button" tabindex="0" aria-label="Ampliar imagem do perfil aberto no Instagram">
+              <img src="prints das telas/Tela do perfil aberto .png" alt="Tela do perfil aberto no Instagram com informações e biografia da conta">
+            </div>
+            <div class="visual-info">
+              <span class="eyebrow">Etapa 04</span>
+              <h3>Perfil aberto</h3>
+              <p>Figura 4 – Perfil aberto após sua localização na ferramenta de busca.</p>
+              <p><strong>Ação:</strong> Visualização das informações principais e biografia do perfil.</p>
+              <div class="theory-tags" style="margin-top: 1rem;">
+                <span class="theory-tag">Organização</span>
+                <span class="theory-tag">Legibilidade</span>
+              </div>
+              <button class="visual-expand-button" type="button" aria-label="Ampliar imagem do perfil aberto no Instagram">Ampliar imagem</button>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="visual-item card reveal">
+            <div class="visual-img-container" role="button" tabindex="0" aria-label="Ampliar imagem da seleção de mídia para postagem">
+              <img src="prints das telas/Tela de postar-selecao.png" alt="Tela do Instagram para selecionar uma foto e iniciar uma nova publicação">
+            </div>
+            <div class="visual-info">
+              <span class="eyebrow">Etapa 05</span>
+              <h3>Seleção para postagem</h3>
+              <p>Figura 5 – Tela de seleção de mídia durante o início do processo de publicação.</p>
+              <p><strong>Ação:</strong> Início da criação de uma nova publicação e escolha da foto.</p>
+              <div class="theory-tags" style="margin-top: 1rem;">
+                <span class="theory-tag">Controle explícito</span>
+                <span class="theory-tag">Facilidade de aprendizagem</span>
+              </div>
+              <button class="visual-expand-button" type="button" aria-label="Ampliar imagem da seleção de mídia para postagem">Ampliar imagem</button>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="visual-item card reveal">
+            <div class="visual-img-container" role="button" tabindex="0" aria-label="Ampliar imagem da área de configurações do Instagram">
+              <img src="prints das telas/Tela configurações .png" alt="Tela da área de configurações do Instagram com opções gerais da conta">
+            </div>
+            <div class="visual-info">
+              <span class="eyebrow">Etapa 06</span>
+              <h3>Configurações</h3>
+              <p>Figura 6 – Área de configurações utilizada na tarefa de localização das opções da conta.</p>
+              <p><strong>Ação:</strong> Acesso à lista de opções gerais e preferências do aplicativo.</p>
+              <div class="theory-tags" style="margin-top: 1rem;">
+                <span class="theory-tag">Organização</span>
+                <span class="theory-tag">Condução</span>
+                <span class="theory-tag">Consistência</span>
+              </div>
+              <button class="visual-expand-button" type="button" aria-label="Ampliar imagem da área de configurações do Instagram">Ampliar imagem</button>
+            </div>
+          </div>
+
+          <!-- 7 -->
+          <div class="visual-item card reveal">
+            <div class="visual-img-container" role="button" tabindex="0" aria-label="Ampliar imagem das configurações de privacidade da conta">
+              <img src="prints das telas/Tela de privacidade da conta .png" alt="Tela do Instagram com as configurações de privacidade da conta">
+            </div>
+            <div class="visual-info">
+              <span class="eyebrow">Etapa 07</span>
+              <h3>Privacidade da conta</h3>
+              <p>Figura 7 – Tela relacionada à privacidade da conta, etapa final do Teste 4.</p>
+              <p><strong>Ação:</strong> Localização bem-sucedida das configurações de privacidade.</p>
+              <div class="theory-tags" style="margin-top: 1rem;">
+                <span class="theory-tag">Significação das denominações</span>
+                <span class="theory-tag">Eficiência</span>
+              </div>
+              <button class="visual-expand-button" type="button" aria-label="Ampliar imagem das configurações de privacidade da conta">Ampliar imagem</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 6 E 7 – RESULTADOS E INDICADORES -->
+    <section id="resultados" class="section">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <p class="eyebrow">Desempenho Geral</p>
+          <h2>Resultados Registrados</h2>
+          <p>Consolidação das interações e indicadores extraídos dos testes com os participantes.</p>
+        </div>
+
+        <div class="indicators-grid reveal">
+          <div class="indicator-card">
+            <div class="val" id="ind-taxa">-</div>
+            <div class="lbl">Taxa de Conclusão</div>
+          </div>
+          <div class="indicator-card">
+            <div class="val" id="ind-tempo">-</div>
+            <div class="lbl">Tempo Médio (Geral)</div>
+          </div>
+          <div class="indicator-card">
+            <div class="val" id="ind-erros">-</div>
+            <div class="lbl">Total de Erros</div>
+          </div>
+          <div class="indicator-card">
+            <div class="val" id="ind-facilidade">-</div>
+            <div class="lbl">Facilidade Média</div>
+          </div>
+        </div>
+
+        <div class="table-responsive reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>Participante</th>
+                <th>Tarefa</th>
+                <th>Tempo</th>
+                <th>Erros</th>
+                <th>Concluiu</th>
+                <th>Facilidade (1 a 5)</th>
+              </tr>
+            </thead>
+            <tbody id="results-table-body">
+              <!-- Renderizado via JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 8 – GRÁFICOS -->
+    <section class="section section-soft">
+      <div class="container">
+        <div class="grid-2 chart-container chart-grid">
+          <div class="chart-wrapper reveal">
+            <div class="chart-title">Tempo médio por tarefa (Segundos)</div>
+            <div id="chart-tempo" class="bar-chart"></div>
+          </div>
+          <div class="chart-wrapper highlight reveal">
+            <div class="chart-title">Quantidade de erros por tarefa</div>
+            <div id="chart-erros" class="bar-chart"></div>
+          </div>
+          <div class="chart-wrapper reveal" style="grid-column: 1 / -1;">
+            <div class="chart-title">Facilidade média por tarefa (Escala 1 a 5)</div>
+            <div id="chart-facilidade" class="bar-chart"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 9 – ANÁLISE DOS RESULTADOS -->
+    <section id="analise" class="section section-dark">
+      <div class="container narrow">
+        <div class="section-heading center reveal">
+          <p class="eyebrow">Compreensão</p>
+          <h2>Análise dos Resultados</h2>
+        </div>
+        <div class="card reveal" style="margin-bottom: 2rem;">
+          <p>Todos os participantes conseguiram concluir as quatro tarefas propostas. Entretanto, o tempo necessário e a quantidade de erros variaram de acordo com a tarefa.</p>
+          <p>O <strong>Teste 3</strong>, relacionado ao início de uma publicação, apresentou tempos reduzidos para a maioria dos participantes, indicando um acesso relativamente direto à função.</p>
+          <p>As tarefas de busca e localização do perfil também foram concluídas por todos. A diferença entre os tempos demonstra que a familiaridade com a organização dos elementos da interface influencia a eficiência da interação.</p>
+        </div>
+        
+        <div class="card reveal" style="border-left: 4px solid var(--warning); background: rgba(255, 193, 7, 0.05);">
+          <h3>Ponto de Atenção: Teste 4</h3>
+          <p>O Teste 4, relacionado à localização das <strong>configurações de privacidade</strong>, apresentou os maiores tempos e concentrou a maior quantidade de erros. Apesar de todos terem concluído a tarefa, o caminho exigiu maior navegação e atenção.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 10 – DISCUSSÃO E REFLEXÃO -->
+    <section class="section">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <p class="eyebrow">Aprendizados</p>
+          <h2>Discussão e Reflexão</h2>
+        </div>
+        <div class="grid-2 discussion-grid reveal">
+          <div class="card">
+            <h3>Resultados Observados</h3>
+            <p>O comportamento dos usuários reflete que caminhos curtos e ícones claros (como na tarefa de postagem) geram respostas muito rápidas, enquanto tarefas que dependem de leitura de menus ou submenus (privacidade) impactam consideravelmente a eficiência da interação.</p>
+          </div>
+          <div class="card">
+            <h3>Desafios do Planejamento</h3>
+            <p>Um dos desafios foi selecionar tarefas simples, mas capazes de analisar diferentes partes da interface. Também foi necessário estabelecer um ponto inicial semelhante para os testes e definir critérios claros para registrar tempo, erros, conclusão e facilidade.</p>
+          </div>
+          <div class="card" style="grid-column: 1 / -1;">
+            <h3>Contribuição das Métricas</h3>
+            <p>A utilização conjunta de métricas objetivas e subjetivas permitiu observar não apenas se uma tarefa foi concluída, mas também o esforço necessário e a percepção de facilidade durante sua realização.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 11 – RELAÇÃO COM A TEORIA -->
+    <section class="section section-soft">
+      <div class="container narrow">
+        <div class="section-heading center reveal">
+          <p class="eyebrow">Conceitos</p>
+          <h2>Relação com a Teoria de IHC</h2>
+          <p>Os resultados e observações vinculam-se aos seguintes aspectos estudados na disciplina:</p>
+        </div>
+        <div class="theory-tags reveal">
+          <span class="theory-tag">Eficiência de uso</span>
+          <span class="theory-tag">Facilidade de aprendizagem</span>
+          <span class="theory-tag">Taxa de erros</span>
+          <span class="theory-tag">Satisfação</span>
+          <span class="theory-tag">Condução</span>
+          <span class="theory-tag">Feedback</span>
+          <span class="theory-tag">Legibilidade</span>
+          <span class="theory-tag">Consistência</span>
+          <span class="theory-tag">Significação dos códigos e denominações</span>
+          <span class="theory-tag">Gestão de erros</span>
+          <span class="theory-tag">Compatibilidade</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 12 – CONCLUSÃO -->
+    <section id="conclusao" class="section">
+      <div class="container narrow">
+        <div class="section-heading center reveal">
+          <p class="eyebrow">Fechamento</p>
+          <h2>Conclusão</h2>
+        </div>
+        <div class="card reveal text-content">
+          <p>A aplicação da avaliação permitiu observar o comportamento da interface do Instagram em tarefas comuns. De modo geral, as funções avaliadas puderam ser concluídas, apresentando bons resultados de facilidade e taxa de conclusão.</p>
+          <p>A principal diferença foi observada na tarefa de localização das configurações de privacidade, que exigiu mais tempo e apresentou maior ocorrência de erros. Isso demonstra que uma interface pode permitir a conclusão de uma tarefa e, ao mesmo tempo, apresentar oportunidades de melhoria relacionadas à organização, condução e facilidade de localização de determinadas funções.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Avaliação de IHC - Atividade Acadêmica. Inspirado na interface Acesso em Foco.</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" aria-hidden="true">
+    <div class="lightbox-content">
+      <h2 id="lightbox-title" class="sr-only">Visualização ampliada do print</h2>
+      <button id="lightbox-close" class="lightbox-close" type="button" aria-label="Fechar ampliação">&times;</button>
+      <img id="lightbox-img" src="" alt="">
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+A lista a seguir contém oportunidades de melhoria na acessibilidade de Uber. Cada item corresponde a uma área delineada na captura de tela anexa.
+
+Descrições de itens
+[440,1032][674,1167]
+Vários itens têm a mesma descrição.
+O texto falado deste item clicável: "Detalhes" é idêntico a outros 1 itens.
+
+Descrições de itens
+[191,1032][417,1167]
+Vários itens têm a mesma descrição.
+O texto falado deste item clicável: "Agendar" é idêntico a outros 1 itens.
+
+Tipo de item não aceito
+[0,105][1080,2298]
+O tipo deste item pode não ser compatível.
+O tipo deste item com.uber.rib.core.compose.root.UberComposeView pode não ser processado pelos serviços de acessibilidade. Use um tipo definido pelo SDK do Android.
+

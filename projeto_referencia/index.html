@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Apresentação acadêmica sobre análise de acessibilidade em aplicativos móveis com ferramentas de inspeção de acessibilidade.">
+  <meta name="google" content="notranslate">
+  <meta name="theme-color" content="#176b3a">
+  <title>Acesso em Foco - Análise de Acessibilidade</title>
+  <script>
+    try {
+      const savedSettings = JSON.parse(localStorage.getItem("farolAccessibilitySettings") ?? "{}");
+      if (savedSettings.theme === "dark") document.documentElement.dataset.theme = "dark";
+      const savedLanguage = localStorage.getItem("farolLanguage");
+      if (["en", "es"].includes(savedLanguage)) {
+        document.documentElement.lang = savedLanguage;
+        document.documentElement.classList.add("i18n-pending");
+      }
+    } catch { }
+    document.documentElement.classList.add("splash-active");
+  </script>
+  <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./libs/lenis/lenis.css">
+  <link rel="stylesheet" href="./css/style.css?v=25">
+  <script src="./libs/lenis/lenis.min.js" defer></script>
+  <script type="module" src="./js/main.js?v=14"></script>
+</head>
+
+<body id="topo">
+  <div class="splash-screen" id="splash-screen" aria-hidden="true">
+    <img class="splash-animation" src="./img/animacao.svg" width="500" height="500" alt="">
+  </div>
+  <a class="pular-conteudo" href="#main-content">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#topo" aria-label="Análise de Acessibilidade - voltar ao início">
+        <img src="./img/logo-ifrr.png" width="132" height="175" alt="">
+        <span class="brand-text"><strong>Análise de Acessibilidade</strong><span>Aplicativos móveis</span></span>
+      </a>
+      <button class="botao-menu" id="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span>Menu</span><span class="icone-menu" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" id="menu-principal" aria-label="Navegação principal">
+        <ul>
+          <li class="desktop-settings-item"><button class="settings-trigger" id="open-settings-desktop" data-settings-trigger type="button" aria-controls="settings-panel" aria-expanded="false"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"></path><circle cx="16" cy="7" r="2"></circle><circle cx="8" cy="17" r="2"></circle></svg> Configurar site</button></li>
+          <li><a href="#objetivo">Objetivo</a></li>
+          <li><a href="#metodologia">Metodologia</a></li>
+          <li><a href="#aplicativos">Aplicativos</a></li>
+          <li><a href="#problemas">Síntese</a></li>
+        </ul>
+      </nav>
+      <div class="header-tools">
+        <div class="language-picker">
+          <button class="language-toggle" id="language-toggle" type="button" aria-label="Selecionar idioma" aria-haspopup="menu" aria-controls="language-menu" aria-expanded="false">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9S14.5 18.4 12 21M12 3c-2.5 2.6-3.8 5.6-3.8 9s1.3 6.4 3.8 9"></path></svg>
+            <span id="language-current">PT</span>
+            <svg class="language-chevron" aria-hidden="true" viewBox="0 0 24 24"><path d="m7 9 5 5 5-5"></path></svg>
+          </button>
+          <div class="language-menu" id="language-menu" role="menu" aria-label="Selecionar idioma" hidden>
+            <button type="button" role="menuitemradio" aria-checked="true" data-language="pt-BR"><small>PT</small><span lang="pt-BR">Português</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></svg></button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-language="en"><small>EN</small><span lang="en">English</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></svg></button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-language="es"><small>ES</small><span lang="es">Español</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"></path></svg></button>
+          </div>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Ativar tema escuro">
+          <svg class="theme-icon theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z"></path></svg>
+          <svg class="theme-icon theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.5"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+        </button>
+      </div>
+    </div>
+    <button class="settings-tab-trigger" id="open-settings-mobile" data-settings-trigger type="button" aria-controls="settings-panel" aria-expanded="false">
+      <span>Configuração</span>
+      <svg class="settings-tab-chevron" aria-hidden="true" viewBox="0 0 24 24"><path d="m7 9 5 5 5-5"></path></svg>
+    </button>
+    <div class="settings-panel" id="settings-panel" hidden>
+      <div class="settings-panel-clip">
+        <section class="settings-panel-surface" aria-labelledby="settings-title" aria-describedby="settings-description" data-lenis-prevent>
+          <div class="settings-header">
+            <div><p class="eyebrow">Preferências de leitura</p><h2 id="settings-title">Configurar site</h2></div>
+            <button class="settings-close" id="close-settings" type="button" aria-label="Fechar configurações"><span aria-hidden="true">×</span></button>
+          </div>
+          <p id="settings-description">Ajuste a apresentação conforme sua necessidade. As escolhas ficam salvas neste navegador.</p>
+          <div class="settings-content">
+            <section class="settings-group" aria-labelledby="text-size-title">
+              <div><h3 id="text-size-title">Tamanho do texto</h3><p id="text-size-status" aria-live="polite">Padrão - 100%</p></div>
+              <div class="text-size-actions">
+                <button type="button" id="text-decrease" aria-label="Diminuir tamanho do texto">A<span aria-hidden="true">−</span></button>
+                <button type="button" id="text-reset">Padrão</button>
+                <button type="button" id="text-increase" aria-label="Aumentar tamanho do texto">A<span aria-hidden="true">+</span></button>
+              </div>
+            </section>
+            <div class="toggle-list">
+              <label class="toggle-option"><span><b>Contraste reforçado</b><small>Aprofunda a diferença entre textos e superfícies.</small></span><input type="checkbox" id="enhanced-contrast"><i aria-hidden="true"></i></label>
+              <label class="toggle-option"><span><b>Alto contraste</b><small>Aplica uma combinação máxima de preto, branco e amarelo.</small></span><input type="checkbox" id="high-contrast"><i aria-hidden="true"></i></label>
+              <label class="toggle-option"><span><b>Maior espaçamento de texto</b><small>Aumenta altura das linhas e distância entre caracteres.</small></span><input type="checkbox" id="text-spacing"><i aria-hidden="true"></i></label>
+              <label class="toggle-option"><span><b>Destacar links</b><small>Reforça sublinhado e identificação dos links de texto.</small></span><input type="checkbox" id="highlight-links"><i aria-hidden="true"></i></label>
+              <label class="toggle-option"><span><b>Scroll suave</b><small>Suaviza a rolagem entre as áreas da página.</small></span><input type="checkbox" id="smooth-scroll"><i aria-hidden="true"></i></label>
+            </div>
+          </div>
+          <div class="settings-footer">
+            <button class="button button-secondary" id="restore-settings" type="button">Restaurar padrão</button>
+            <button class="button button-primary" id="apply-settings" type="button">Concluir</button>
+          </div>
+          <p class="sr-only" id="settings-announcement" aria-live="polite"></p>
+        </section>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="hero" aria-labelledby="titulo-principal">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="institution-name">IFRR</p>
+          <p class="eyebrow activity-label"><span class="activity-status" aria-hidden="true"></span> Apresentação acadêmica</p>
+          <h1 id="titulo-principal">Análise de Acessibilidade em Aplicativos</h1>
+          <p class="lead">Avaliação de interfaces mobile utilizando ferramentas de inspeção de acessibilidade.</p>
+          <p class="hero-indicator">3 aplicativos <span aria-hidden="true">•</span> barreiras de acessibilidade <span aria-hidden="true">•</span> propostas de solução</p>
+          <dl class="academic-data">
+            <div class="academic-discipline"><dt>Disciplina</dt><dd>MULTIMÍDIA E INTERAÇÃO HUMANO-COMPUTADOR</dd></div>
+            <div><dt>Professor</dt><dd>RICARDO JACAUNA</dd></div>
+            <div><dt>Turma</dt><dd>MOD 4 - NOTURNO</dd></div>
+            <div class="academic-date"><dt>Apresentação</dt><dd><time datetime="2026-08-19">19/08/2026</time></dd></div>
+          </dl>
+          <a class="button button-primary" href="#integrantes">Iniciar apresentação <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-visual reveal" data-hero-visual aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="integrantes" aria-labelledby="integrantes-titulo">
+      <div class="container">
+        <div class="section-heading center reveal"><p class="eyebrow">Equipe</p><h2 id="integrantes-titulo">Integrantes</h2><p>Equipe responsável pela análise de acessibilidade.</p></div>
+        <div class="team-grid">
+          <article class="member-card reveal">
+            <div class="member-photo member-photo-andreia">
+              <img src="img/Andreia.jpeg" alt="Retrato de Andreia em enquadramento próximo. Ela aparece de frente para a câmera, com cabelos longos, escuros e cacheados, distribuídos ao redor do rosto e sobre os ombros. Usa uma blusa preta de decote em V e um colar com pequeno pingente. A expressão é neutra, com os olhos direcionados para a câmera, diante de um fundo claro e discreto." loading="eager">
+            </div>
+            <h3>Andreia</h3>
+          </article>
+          <article class="member-card reveal">
+            <div class="member-photo member-photo-israel">
+              <img src="img/Israel.jpeg" alt="Foto de Israel em ambiente externo, enquadrado dos ombros para cima e olhando diretamente para a câmera. Ele tem cabelos escuros, volumosos e ondulados, com mechas caindo sobre a testa, e usa um fone de ouvido. Veste uma camiseta marrom, mochila e um cordão de identificação verde e branco. Ao fundo aparecem árvores, calçada, muro, rua e veículos." loading="eager">
+            </div>
+            <h3>Israel</h3>
+          </article>
+          <article class="member-card reveal">
+            <div class="member-photo member-photo-kelly">
+              <img src="img/Kelly.jpeg" alt="Foto de Kelly sentada em uma cadeira durante um evento, olhando para a câmera e sorrindo levemente. Ela tem cabelos longos, lisos e escuros, repartidos ao centro e posicionados sobre os ombros. Usa vestido preto com detalhes de renda, brincos prateados e um colar delicado. Ao fundo aparecem mesas, cadeiras brancas, outras pessoas e iluminação quente de ambiente interno." loading="eager">
+            </div>
+            <h3>Kelly</h3>
+          </article>
+          <article class="member-card reveal">
+            <div class="member-photo member-photo-murilo">
+              <img src="img/Murilo.jpeg" alt="Foto de Murilo dentro de um ônibus, enquadrado do peito para cima e olhando para a câmera. Ele tem cabelos curtos, escuros e cacheados e veste uma camisa verde. Uma das mãos aparece em primeiro plano fazendo sinal de positivo com o polegar. Ao fundo são visíveis bancos azuis, janelas e estruturas internas amarelas do ônibus." loading="eager">
+            </div>
+            <h3>Murilo</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="objetivo" aria-labelledby="objetivo-titulo">
+      <div class="container narrow">
+        <div class="section-heading center reveal">
+          <p class="eyebrow">O ponto de partida</p>
+          <h2 id="objetivo-titulo">Objetivo</h2>
+          <p>Esta atividade tem como objetivo avaliar a acessibilidade de aplicativos móveis utilizando uma ferramenta de inspeção de acessibilidade. Foram analisados três aplicativos diferentes para identificar possíveis barreiras de interação e compreender as recomendações apresentadas pela ferramenta para melhorar a experiência dos usuários.</p>
+        </div>
+        <div class="question-callout reveal"><span aria-hidden="true">✓</span><p>Observar, registrar e propor melhorias sem substituir a avaliação humana.</p></div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="metodologia" aria-labelledby="metodologia-titulo">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <p class="eyebrow">Como a análise foi realizada</p>
+          <h2 id="metodologia-titulo">Metodologia</h2>
+          <p>Um processo direto em quatro etapas, da escolha dos aplicativos à interpretação dos resultados.</p>
+        </div>
+        <div class="pillar-grid methodology-grid">
+          <article class="reveal"><span aria-hidden="true">01</span><h3>Selecionar os aplicativos</h3><p>Definir três interfaces mobile para a avaliação.</p></article>
+          <article class="reveal"><span aria-hidden="true">02</span><h3>Executar o Scanner de Acessibilidade</h3><p>Inspecionar as telas escolhidas com a ferramenta.</p></article>
+          <article class="reveal"><span aria-hidden="true">03</span><h3>Identificar os problemas</h3><p>Registrar as barreiras apontadas durante a análise.</p></article>
+          <article class="reveal"><span aria-hidden="true">04</span><h3>Analisar as recomendações</h3><p>Relacionar cada diagnóstico a uma possível correção.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <div id="aplicativos">
+      <section class="section app-section" id="aplicativo-01" aria-labelledby="aplicativo-01-titulo">
+        <div class="container">
+          <div class="app-section-heading reveal">
+            <div class="app-icon-placeholder uber-app-icon" aria-hidden="true">U</div>
+            <div><p class="eyebrow">Aplicativo analisado</p><h2 id="aplicativo-01-titulo">Aplicativo 01 - Uber</h2><p>O aplicativo foi analisado com o Scanner de Acessibilidade. Os estudos de caso a seguir apresentam achados reais obtidos em diferentes telas da Uber.</p></div>
+          </div>
+
+          <div class="app-case-list">
+            <article class="app-case reveal" id="uber-bug-01" aria-labelledby="uber-bug-01-titulo">
+              <header class="app-case-heading">
+                <p class="case-label"><span>BUG 01</span> Área de toque</p>
+                <h3 id="uber-bug-01-titulo">Área de toque muito pequena</h3>
+                <p>Dois elementos clicáveis da tela apresentam altura muito menor que a indicada pela ferramenta.</p>
+              </header>
+              <figure class="case-evidence-group">
+                <div class="app-analysis-layout case-study-layout">
+                <div class="screenshot-card evidence-card">
+                  <div class="phone-frame evidence-frame"><img src="./bugs/uber/screen4.png" width="1080" height="2340" loading="lazy" alt="Tela da seção Conta da Uber. Contornos laranja do Scanner de Acessibilidade destacam os controles 4,96 e Não verificado, identificados como alvos clicáveis com apenas 18dp de altura."></div>
+                </div>
+                <div class="case-analysis">
+                  <dl class="metric-comparison" aria-label="Comparação entre a altura detectada e a recomendada">
+                    <div class="metric-detected"><dt>Detectado</dt><dd>18<small>dp</small></dd></div>
+                    <div class="metric-recommended"><dt>Recomendado</dt><dd>≥ 48<small>dp</small></dd></div>
+                  </dl>
+                  <section class="issue-card finding-card finding-problem" aria-labelledby="uber-bug-01-achado"><span class="issue-number">ACHADO DO SCANNER</span><h4 id="uber-bug-01-achado">Problema encontrado</h4><p>Dois itens clicáveis, localizados nas áreas <span class="technical-value">[45,293][179,345]</span> e <span class="technical-value">[201,293][446,345]</span>, possuem apenas 18dp de altura.</p></section>
+                  <section class="issue-card finding-card impact-card" aria-labelledby="uber-bug-01-impacto"><span class="issue-number">IMPACTO</span><h4 id="uber-bug-01-impacto">Impacto na acessibilidade</h4><p>Alvos pequenos dificultam a interação de pessoas com limitações motoras, tremores ou menor precisão nos movimentos.</p></section>
+                  <section class="issue-card finding-card finding-recommendation" aria-labelledby="uber-bug-01-recomendacao"><span class="issue-number">RECOMENDAÇÃO DO SCANNER</span><h4 id="uber-bug-01-recomendacao">O que a ferramenta orienta</h4><p>“Considere definir a altura desta área de toque como 48dp ou maior.”</p></section>
+                  <section class="issue-card finding-card finding-solution" aria-labelledby="uber-bug-01-solucao"><span class="issue-number">PROPOSTA DA EQUIPE</span><h4 id="uber-bug-01-solucao">Solução sugerida</h4><p>Ampliar a região interativa do componente para pelo menos 48dp, sem a necessidade de aumentar excessivamente seu tamanho visual.</p></section>
+                </div>
+                </div>
+                <figcaption class="evidence-summary-card"><strong>Evidência - alvos de 18dp</strong><span>Os contornos do scanner marcam “4,96” e “Não verificado”.</span><button class="preview-button evidence-preview-button" type="button" data-preview-src="./bugs/uber/screen4.png" aria-label="Ampliar evidência do Bug 01 da Uber">Ampliar evidência</button></figcaption>
+              </figure>
+            </article>
+
+            <article class="app-case reveal" id="uber-bug-02" aria-labelledby="uber-bug-02-titulo">
+              <header class="app-case-heading">
+                <p class="case-label"><span>BUG 02</span> Contraste do texto</p>
+                <h3 id="uber-bug-02-titulo">Baixo contraste do texto</h3>
+                <p>Três textos sobre o fundo vermelho ficaram abaixo da relação de contraste indicada para textos pequenos.</p>
+              </header>
+              <figure class="case-evidence-group">
+                <div class="app-analysis-layout case-study-layout">
+                <div class="screenshot-card evidence-card">
+                  <div class="phone-frame evidence-frame"><img src="./bugs/uber/screen1.png" width="1080" height="2340" loading="lazy" alt="Tela inicial da Uber. Contornos laranja do Scanner de Acessibilidade destacam as etiquetas promocionais 10-30%, Promo e Novo, cujo contraste entre texto e fundo foi medido em 3,42:1."></div>
+                </div>
+                <div class="case-analysis">
+                  <dl class="metric-comparison" aria-label="Comparação entre o contraste detectado e o recomendado para textos pequenos">
+                    <div class="metric-detected"><dt>Detectado</dt><dd>3,42<small>:1</small></dd></div>
+                    <div class="metric-recommended"><dt>Texto pequeno</dt><dd>&gt; 4,50<small>:1</small></dd></div>
+                  </dl>
+                  <section class="issue-card finding-card finding-problem" aria-labelledby="uber-bug-02-achado"><span class="issue-number">ACHADO DO SCANNER</span><h4 id="uber-bug-02-achado">Problema encontrado</h4><p>A ferramenta encontrou relação de contraste de 3,42 em três textos, estimando primeiro plano <span class="color-value">#DEDEDE</span> e fundo <span class="color-value">#E42500</span>.</p></section>
+                  <section class="issue-card finding-card impact-card" aria-labelledby="uber-bug-02-impacto"><span class="issue-number">IMPACTO</span><h4 id="uber-bug-02-impacto">Impacto na acessibilidade</h4><p>O baixo contraste pode dificultar a leitura para pessoas com baixa visão ou outras dificuldades visuais.</p></section>
+                  <section class="issue-card finding-card finding-recommendation" aria-labelledby="uber-bug-02-recomendacao"><span class="issue-number">RECOMENDAÇÃO DO SCANNER</span><h4 id="uber-bug-02-recomendacao">O que a ferramenta orienta</h4><p>Usar cores com contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes.</p></section>
+                  <section class="issue-card finding-card finding-solution" aria-labelledby="uber-bug-02-solucao"><span class="issue-number">PROPOSTA DA EQUIPE</span><h4 id="uber-bug-02-solucao">Solução sugerida</h4><p>Ajustar a cor do texto, a cor do fundo ou ambas até atingir uma relação de contraste adequada, seguida de nova verificação.</p></section>
+                </div>
+                </div>
+                <figcaption class="evidence-summary-card"><strong>Evidência - contraste de 3,42:1</strong><span>Os contornos do scanner marcam as três etiquetas promocionais.</span><button class="preview-button evidence-preview-button" type="button" data-preview-src="./bugs/uber/screen1.png" aria-label="Ampliar evidência do Bug 02 da Uber">Ampliar evidência</button></figcaption>
+              </figure>
+            </article>
+
+            <article class="app-case reveal" id="uber-bug-03" aria-labelledby="uber-bug-03-titulo">
+              <header class="app-case-heading">
+                <p class="case-label"><span>BUG 03</span> Descrição de itens</p>
+                <h3 id="uber-bug-03-titulo">Descrições de acessibilidade repetidas</h3>
+                <p>Controles de ofertas diferentes são anunciados com os mesmos textos falados.</p>
+              </header>
+              <figure class="case-evidence-group">
+                <div class="app-analysis-layout case-study-layout">
+                <div class="screenshot-card evidence-card">
+                  <div class="phone-frame evidence-frame"><img src="./bugs/uber/screen6.png" width="1080" height="2340" loading="lazy" alt="Caixa de entrada da Uber. Contornos laranja do Scanner de Acessibilidade destacam os controles Agendar e Detalhes da primeira oferta; os mesmos rótulos são usados novamente na oferta seguinte."></div>
+                </div>
+                <div class="case-analysis">
+                  <dl class="metric-comparison labels-comparison" aria-label="Textos falados repetidos identificados pelo Scanner">
+                    <div class="metric-detected"><dt>Texto repetido</dt><dd>“Agendar”</dd></div>
+                    <div class="metric-detected"><dt>Texto repetido</dt><dd>“Detalhes”</dd></div>
+                  </dl>
+                  <section class="issue-card finding-card finding-problem" aria-labelledby="uber-bug-03-achado"><span class="issue-number">ACHADO DO SCANNER</span><h4 id="uber-bug-03-achado">Problema encontrado</h4><p>O texto falado de cada item clicável - “Agendar” e “Detalhes” - é idêntico ao de outro item da tela.</p></section>
+                  <section class="issue-card finding-card impact-card" aria-labelledby="uber-bug-03-impacto"><span class="issue-number">IMPACTO</span><h4 id="uber-bug-03-impacto">Impacto na acessibilidade</h4><p>Quem usa leitor de tela pode ouvir a mesma descrição para ofertas diferentes e não identificar com clareza o contexto de cada ação.</p></section>
+                  <section class="issue-card finding-card finding-recommendation" aria-labelledby="uber-bug-03-recomendacao"><span class="issue-number">REGISTRO DO SCANNER</span><h4 id="uber-bug-03-recomendacao">Orientação disponível no relatório</h4><p>O relatório não fornece uma instrução de correção separada; registra: “Vários itens têm a mesma descrição.”</p></section>
+                  <section class="issue-card finding-card finding-solution" aria-labelledby="uber-bug-03-solucao"><span class="issue-number">PROPOSTA DA EQUIPE</span><h4 id="uber-bug-03-solucao">Solução sugerida</h4><p>Fornecer contexto suficiente nos rótulos de acessibilidade para diferenciar ações iguais associadas a ofertas distintas. Essa contextualização é uma proposta da equipe, não uma citação do scanner.</p></section>
+                </div>
+                </div>
+                <figcaption class="evidence-summary-card"><strong>Evidência - rótulos repetidos</strong><span>Os controles “Agendar” e “Detalhes” aparecem nas duas ofertas.</span><button class="preview-button evidence-preview-button" type="button" data-preview-src="./bugs/uber/screen6.png" aria-label="Ampliar evidência do Bug 03 da Uber">Ampliar evidência</button></figcaption>
+              </figure>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft app-section" id="aplicativo-02" aria-labelledby="aplicativo-02-titulo">
+        <div class="container">
+          <div class="app-section-heading reveal">
+            <div class="app-icon-placeholder" aria-hidden="true">S</div>
+            <div><p class="eyebrow">Aplicativo analisado</p><h2 id="aplicativo-02-titulo">Aplicativo 02 - SHEIN</h2><p>A tela inicial da SHEIN foi inspecionada com o Scanner de Acessibilidade para identificar barreiras de interação, descrição e adaptação do texto.</p></div>
+          </div>
+          <div class="app-case-list">
+            <article class="app-case reveal" id="shein-bug-01" aria-labelledby="shein-bug-01-titulo">
+              <header class="app-case-heading">
+                <p class="case-label"><span>BUG 01</span> Áreas de toque pequenas</p>
+                <h3 id="shein-bug-01-titulo">Elementos clicáveis menores que a área recomendada</h3>
+                <p>O scanner identificou controles interativos com largura ou altura inferior a 48dp.</p>
+              </header>
+              <figure class="case-evidence-group">
+                <div class="app-analysis-layout case-study-layout">
+                  <div class="screenshot-card evidence-card">
+                    <div class="phone-frame evidence-frame"><div class="evidence-image-wrap shein-evidence shein-evidence-touch"><img src="./bugs/shein/screen1.png" width="1080" height="2340" loading="lazy" alt="Tela inicial da SHEIN analisada pelo Scanner de Acessibilidade. Os controles clicáveis da barra superior e das categorias estão contornados; entre os alvos pequenos identificados há controles de 36dp por 40dp e categorias com cerca de 38dp de altura."><span class="evidence-marker marker-touch-controls" aria-hidden="true"></span><span class="evidence-marker marker-touch-categories" aria-hidden="true"></span></div></div>
+                  </div>
+                  <div class="case-analysis">
+                    <dl class="metric-comparison" aria-label="Comparação entre o tamanho detectado e a área de toque recomendada">
+                      <div class="metric-detected"><dt>Detectado</dt><dd>36 × 40<small>dp</small></dd></div>
+                      <div class="metric-recommended"><dt>Recomendado</dt><dd>≥ 48<small>dp</small></dd></div>
+                    </dl>
+                    <section class="issue-card finding-card finding-problem" aria-labelledby="shein-bug-01-achado"><span class="issue-number">ACHADO DO SCANNER</span><h4 id="shein-bug-01-achado">Problema encontrado</h4><p>O scanner detectou elementos clicáveis abaixo do tamanho recomendado. O relatório registra alvos de 36dp × 40dp, 32dp × 36dp e 44dp × 28dp, além de controles de categoria com aproximadamente 38dp de altura.</p></section>
+                    <section class="issue-card finding-card impact-card" aria-labelledby="shein-bug-01-impacto"><span class="issue-number">IMPACTO</span><h4 id="shein-bug-01-impacto">Impacto na acessibilidade</h4><p>Alvos pequenos podem dificultar a seleção precisa, especialmente para pessoas com precisão motora reduzida, tremores ou outras limitações motoras.</p></section>
+                    <section class="issue-card finding-card finding-recommendation" aria-labelledby="shein-bug-01-recomendacao"><span class="issue-number">RECOMENDAÇÃO DO SCANNER</span><h4 id="shein-bug-01-recomendacao">O que a ferramenta orienta</h4><p>Aumentar a dimensão afetada da área de toque para 48dp ou mais.</p></section>
+                    <section class="issue-card finding-card finding-solution" aria-labelledby="shein-bug-01-solucao"><span class="issue-number">PROPOSTA DA EQUIPE</span><h4 id="shein-bug-01-solucao">Solução sugerida</h4><p>Ampliar a área interativa efetiva dos controles sem aumentar desnecessariamente sua aparência visual.</p></section>
+                  </div>
+                </div>
+                <figcaption class="evidence-summary-card"><strong>Evidência - alvos menores que 48dp</strong><span>Os destaques reforçam os controles superiores e as categorias que apresentam dimensões reduzidas no relatório.</span><button class="preview-button evidence-preview-button" type="button" data-preview-src="./bugs/shein/screen1.png" aria-label="Ampliar evidência do Bug 01 da SHEIN">Ampliar evidência</button></figcaption>
+              </figure>
+            </article>
+
+            <article class="app-case reveal" id="shein-bug-02" aria-labelledby="shein-bug-02-titulo">
+              <header class="app-case-heading">
+                <p class="case-label"><span>BUG 02</span> Descrições repetidas</p>
+                <h3 id="shein-bug-02-titulo">Descrição falada repetida em itens “Plus Size”</h3>
+                <p>O achado se refere à descrição exposta por itens clicáveis, e não apenas à repetição visual do texto.</p>
+              </header>
+              <figure class="case-evidence-group">
+                <div class="app-analysis-layout case-study-layout">
+                  <div class="screenshot-card evidence-card">
+                    <div class="phone-frame evidence-frame"><div class="evidence-image-wrap shein-evidence shein-evidence-repeat"><img src="./bugs/shein/screen1.png" width="1080" height="2340" loading="lazy" alt="Tela inicial da SHEIN analisada pelo Scanner de Acessibilidade. Dois controles clicáveis com o texto Plus Size aparecem em áreas diferentes da tela e são destacados como apoio visual ao achado de descrições faladas idênticas."><span class="evidence-marker marker-plus-card" aria-hidden="true"></span><span class="evidence-marker marker-plus-category" aria-hidden="true"></span></div></div>
+                  </div>
+                  <div class="case-analysis">
+                    <dl class="metric-comparison labels-comparison" aria-label="Descrição repetida e item identificado pelo scanner">
+                      <div class="metric-detected"><dt>Detectado</dt><dd>Descrição repetida</dd></div>
+                      <div class="metric-recommended"><dt>Item identificado</dt><dd>“Plus Size”</dd></div>
+                    </dl>
+                    <section class="issue-card finding-card finding-problem" aria-labelledby="shein-bug-02-achado"><span class="issue-number">ACHADO DO SCANNER</span><h4 id="shein-bug-02-achado">Problema encontrado</h4><p>O scanner identificou mais de um item clicável com a mesma descrição falada. O texto “Plus Size” é utilizado de forma idêntica em outro item da tela.</p></section>
+                    <section class="issue-card finding-card impact-card" aria-labelledby="shein-bug-02-impacto"><span class="issue-number">IMPACTO</span><h4 id="shein-bug-02-impacto">Impacto na acessibilidade</h4><p>Quando elementos interativos diferentes expõem descrições faladas idênticas, uma pessoa que usa leitor de tela pode ter dificuldade para distinguir o propósito ou o contexto de cada controle.</p></section>
+                    <section class="issue-card finding-card finding-recommendation" aria-labelledby="shein-bug-02-registro"><span class="issue-number">REGISTRO DO SCANNER</span><h4 id="shein-bug-02-registro">Orientação disponível no relatório</h4><p>O relatório registra que vários itens têm a mesma descrição e que o texto falado “Plus Size” é idêntico ao de outro item. Não apresenta uma instrução de correção separada para esse achado.</p></section>
+                    <section class="issue-card finding-card finding-solution" aria-labelledby="shein-bug-02-solucao"><span class="issue-number">PROPOSTA DA EQUIPE</span><h4 id="shein-bug-02-solucao">Solução sugerida</h4><p>Fornecer rótulos de acessibilidade contextualizados que descrevam o propósito de cada controle, como categoria ou acesso à coleção, de acordo com a ação realmente executada.</p></section>
+                  </div>
+                </div>
+                <figcaption class="evidence-summary-card"><strong>Evidência - descrição “Plus Size” repetida</strong><span>A captura mostra duas ocorrências em contextos diferentes; o scanner confirma que itens clicáveis compartilham a mesma descrição falada.</span><button class="preview-button evidence-preview-button" type="button" data-preview-src="./bugs/shein/screen1.png" aria-label="Ampliar evidência do Bug 02 da SHEIN">Ampliar evidência</button></figcaption>
+              </figure>
+            </article>
+
+            <article class="app-case reveal" id="shein-bug-03" aria-labelledby="shein-bug-03-titulo">
+              <header class="app-case-heading">
+                <p class="case-label"><span>BUG 03</span> Texto e componentes com dimensões fixas</p>
+                <h3 id="shein-bug-03-titulo">Contêineres podem limitar a expansão do texto</h3>
+                <p>O scanner encontrou elementos de texto e grupos com dimensões fixas que podem não acompanhar o aumento da fonte.</p>
+              </header>
+              <figure class="case-evidence-group">
+                <div class="app-analysis-layout case-study-layout">
+                  <div class="screenshot-card evidence-card">
+                    <div class="phone-frame evidence-frame"><div class="evidence-image-wrap shein-evidence shein-evidence-fixed"><img src="./bugs/shein/screen1.png" width="1080" height="2340" loading="lazy" alt="Tela inicial da SHEIN analisada pelo Scanner de Acessibilidade. A faixa horizontal de categorias, com textos como Masculino, Envio Nacional, Feminino e Esporte, é destacada como região com contêineres de largura fixa que podem limitar a expansão do texto."><span class="evidence-marker marker-fixed-categories" aria-hidden="true"></span></div></div>
+                  </div>
+                  <div class="case-analysis">
+                    <dl class="metric-comparison labels-comparison" aria-label="Comportamento detectado e comportamento recomendado para expansão do texto">
+                      <div class="metric-detected"><dt>Detectado</dt><dd>Dimensão fixa</dd></div>
+                      <div class="metric-recommended"><dt>Recomendado</dt><dd>Layout adaptável</dd></div>
+                    </dl>
+                    <section class="issue-card finding-card finding-problem" aria-labelledby="shein-bug-03-achado"><span class="issue-number">ACHADO DO SCANNER</span><h4 id="shein-bug-03-achado">Problema encontrado</h4><p>O scanner identificou componentes de texto e contêineres com dimensões fixas, o que pode limitar a expansão do conteúdo quando o tamanho da fonte é aumentado.</p></section>
+                    <section class="issue-card finding-card impact-card" aria-labelledby="shein-bug-03-impacto"><span class="issue-number">IMPACTO</span><h4 id="shein-bug-03-impacto">Impacto na acessibilidade</h4><p>Pessoas que usam fontes maiores no sistema podem encontrar textos cortados, rótulos truncados, sobreposição ou perda de informação quando os contêineres não acompanham o conteúdo ampliado.</p></section>
+                    <section class="issue-card finding-card finding-recommendation" aria-labelledby="shein-bug-03-recomendacao"><span class="issue-number">RECOMENDAÇÃO DO SCANNER</span><h4 id="shein-bug-03-recomendacao">O que a ferramenta orienta</h4><p>Modificar os <span class="technical-value">LayoutParams</span> para permitir a expansão do texto.</p></section>
+                    <section class="issue-card finding-card finding-solution" aria-labelledby="shein-bug-03-solucao"><span class="issue-number">PROPOSTA DA EQUIPE</span><h4 id="shein-bug-03-solucao">Solução sugerida</h4><p>Evitar dimensões rígidas nos contêineres de texto, permitir que os componentes cresçam com o conteúdo e a escala de fonte do sistema e verificar a interface com tamanhos de fonte maiores no Android.</p></section>
+                  </div>
+                </div>
+                <figcaption class="evidence-summary-card"><strong>Evidência - contêineres de texto com largura fixa</strong><span>O destaque identifica a faixa de categorias associada no relatório a grupos que podem limitar a expansão do texto.</span><button class="preview-button evidence-preview-button" type="button" data-preview-src="./bugs/shein/screen1.png" aria-label="Ampliar evidência do Bug 03 da SHEIN">Ampliar evidência</button></figcaption>
+              </figure>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section app-section" id="aplicativo-03" aria-labelledby="aplicativo-03-titulo">
+        <div class="container">
+          <div class="app-section-heading reveal">
+            <div class="app-icon-placeholder" aria-hidden="true">G</div>
+            <div><p class="eyebrow">Aplicativo analisado</p><h2 id="aplicativo-03-titulo">Aplicativo 03 - Google Play Store</h2><p>A Google Play Store foi analisada com o Scanner de Acessibilidade em diferentes telas da aplicação. Os achados selecionados apresentam problemas relacionados ao contraste do texto, à exposição de conteúdo para serviços de acessibilidade e à organização de elementos interativos.</p></div>
+          </div>
+          <div class="app-case-list">
+            <article class="app-case reveal" id="google-play-bug-01" aria-labelledby="google-play-bug-01-titulo">
+              <header class="app-case-heading">
+                <p class="case-label"><span>BUG 01</span> Contraste do texto</p>
+                <h3 id="google-play-bug-01-titulo">Baixo contraste do texto</h3>
+                <p>O texto destacado pelo scanner apresenta contraste inferior ao valor indicado para textos pequenos.</p>
+              </header>
+              <figure class="case-evidence-group">
+                <div class="app-analysis-layout case-study-layout">
+                  <div class="screenshot-card evidence-card">
+                    <div class="phone-frame evidence-frame"><img src="./bugs/google%20play/screen3.png" width="1080" height="2340" loading="lazy" alt="Menu da conta na Google Play Store analisado pelo Scanner de Acessibilidade. O texto azul Gerenciar sua Conta do Google aparece sobre fundo cinza e apresentou contraste de 2,91:1."></div>
+                  </div>
+                  <div class="case-analysis">
+                    <dl class="metric-comparison" aria-label="Comparação entre o contraste detectado e o recomendado para textos pequenos">
+                      <div class="metric-detected"><dt>Detectado</dt><dd>2,91<small>:1</small></dd></div>
+                      <div class="metric-recommended"><dt>Recomendado</dt><dd>≥ 4,50<small>:1</small></dd></div>
+                    </dl>
+                    <section class="issue-card finding-card finding-problem" aria-labelledby="google-play-bug-01-achado"><span class="issue-number">ACHADO DO SCANNER</span><h4 id="google-play-bug-01-achado">Problema encontrado</h4><p>O Scanner de Acessibilidade identificou contraste insuficiente entre o texto e o fundo. A relação estimada é de 2,91:1, entre <span class="color-value">#387AFF</span> e <span class="color-value">#3A3A3D</span>, abaixo dos 4,50:1 indicados pela ferramenta.</p></section>
+                    <section class="issue-card finding-card impact-card" aria-labelledby="google-play-bug-01-impacto"><span class="issue-number">IMPACTO</span><h4 id="google-play-bug-01-impacto">Impacto na acessibilidade</h4><p>O baixo contraste pode dificultar a leitura para pessoas com baixa visão ou sensibilidade reduzida ao contraste, principalmente em telas pequenas ou ambientes muito iluminados.</p></section>
+                    <section class="issue-card finding-card finding-recommendation" aria-labelledby="google-play-bug-01-recomendacao"><span class="issue-number">RECOMENDAÇÃO DO SCANNER</span><h4 id="google-play-bug-01-recomendacao">O que a ferramenta orienta</h4><p>Aumentar a taxa de contraste entre o primeiro plano e o plano de fundo do texto para 4,50:1 ou mais.</p></section>
+                    <section class="issue-card finding-card finding-solution" aria-labelledby="google-play-bug-01-solucao"><span class="issue-number">PROPOSTA DA EQUIPE</span><h4 id="google-play-bug-01-solucao">Solução sugerida</h4><p>Ajustar as cores do texto e/ou do fundo para aumentar o contraste visual e atingir pelo menos a relação recomendada pela ferramenta, preservando a hierarquia visual da interface.</p></section>
+                  </div>
+                </div>
+                <figcaption class="evidence-summary-card"><strong>Evidência - contraste de 2,91:1</strong><span>A captura mostra o texto azul cujo contraste foi medido pela ferramenta.</span><button class="preview-button evidence-preview-button" type="button" data-preview-src="./bugs/google%20play/screen3.png" aria-label="Ampliar evidência do Bug 01 da Google Play Store">Ampliar evidência</button></figcaption>
+              </figure>
+            </article>
+
+            <article class="app-case reveal" id="google-play-bug-02" aria-labelledby="google-play-bug-02-titulo">
+              <header class="app-case-heading">
+                <p class="case-label"><span>BUG 02</span> Texto oculto</p>
+                <h3 id="google-play-bug-02-titulo">Texto oculto para serviços de acessibilidade</h3>
+                <p>Conteúdo textual relevante pode não estar sendo corretamente disponibilizado aos serviços de acessibilidade.</p>
+              </header>
+              <figure class="case-evidence-group">
+                <div class="app-analysis-layout case-study-layout">
+                  <div class="screenshot-card evidence-card">
+                    <div class="phone-frame evidence-frame"><img src="./bugs/google%20play/screen1.png" width="1080" height="2340" loading="lazy" alt="Tela Para você da Google Play Store. Um contorno laranja do Scanner de Acessibilidade abrange o cartão com o texto O prêmio semanal, que pode não estar disponível aos serviços de acessibilidade."></div>
+                  </div>
+                  <div class="case-analysis">
+                    <dl class="metric-comparison labels-comparison" aria-label="Resumo do achado de texto oculto">
+                      <div class="metric-detected"><dt>Detectado</dt><dd>Texto oculto</dd></div>
+                      <div class="metric-recommended"><dt>Afeta</dt><dd>Serviços de acessibilidade</dd></div>
+                    </dl>
+                    <section class="issue-card finding-card finding-problem" aria-labelledby="google-play-bug-02-achado"><span class="issue-number">ACHADO DO SCANNER</span><h4 id="google-play-bug-02-achado">Problema encontrado</h4><p>O Scanner detectou conteúdo textual que pode não estar sendo corretamente disponibilizado aos serviços de acessibilidade. Entre os textos identificados está “O prêmio semanal”.</p></section>
+                    <section class="issue-card finding-card impact-card" aria-labelledby="google-play-bug-02-impacto"><span class="issue-number">IMPACTO</span><h4 id="google-play-bug-02-impacto">Impacto na acessibilidade</h4><p>Se o conteúdo visível não for corretamente exposto à árvore de acessibilidade, usuários de leitores de tela podem receber informações incompletas ou não compreender todo o conteúdo apresentado.</p></section>
+                    <section class="issue-card finding-card finding-recommendation" aria-labelledby="google-play-bug-02-recomendacao"><span class="issue-number">RECOMENDAÇÃO DO SCANNER</span><h4 id="google-play-bug-02-recomendacao">O que a ferramenta orienta</h4><p>O item pode não estar mostrando o conteúdo para os serviços de acessibilidade; o conteúdo relevante deve ser disponibilizado a esses serviços.</p></section>
+                    <section class="issue-card finding-card finding-solution" aria-labelledby="google-play-bug-02-solucao"><span class="issue-number">PROPOSTA DA EQUIPE</span><h4 id="google-play-bug-02-solucao">Solução sugerida</h4><p>Garantir que o conteúdo textual relevante seja corretamente exposto na árvore de acessibilidade e associado ao componente correspondente, permitindo que tecnologias assistivas transmitam a mesma informação apresentada visualmente.</p></section>
+                  </div>
+                </div>
+                <figcaption class="evidence-summary-card"><strong>Evidência - texto oculto</strong><span>O contorno do scanner abrange o cartão que inclui o texto “O prêmio semanal”.</span><button class="preview-button evidence-preview-button" type="button" data-preview-src="./bugs/google%20play/screen1.png" aria-label="Ampliar evidência do Bug 02 da Google Play Store">Ampliar evidência</button></figcaption>
+              </figure>
+            </article>
+
+            <article class="app-case reveal" id="google-play-bug-03" aria-labelledby="google-play-bug-03-titulo">
+              <header class="app-case-heading">
+                <p class="case-label"><span>BUG 03</span> Itens clicáveis</p>
+                <h3 id="google-play-bug-03-titulo">Itens clicáveis sobrepostos</h3>
+                <p>Dois elementos clicáveis compartilham a mesma região da tela segundo o relatório do scanner.</p>
+              </header>
+              <figure class="case-evidence-group">
+                <div class="app-analysis-layout case-study-layout">
+                  <div class="screenshot-card evidence-card">
+                    <div class="phone-frame evidence-frame"><img src="./bugs/google%20play/screen5.png" width="1080" height="2340" loading="lazy" alt="Tela de pesquisa da Google Play Store analisada pelo Scanner de Acessibilidade. Na região superior direita, dois elementos clicáveis compartilham a mesma área de interação, causando sobreposição."></div>
+                  </div>
+                  <div class="case-analysis">
+                    <dl class="metric-comparison labels-comparison" aria-label="Resumo dos itens clicáveis sobrepostos">
+                      <div class="metric-detected"><dt>Detectado</dt><dd>2 elementos</dd></div>
+                      <div class="metric-recommended"><dt>Situação</dt><dd>Mesma área</dd></div>
+                    </dl>
+                    <section class="issue-card finding-card finding-problem" aria-labelledby="google-play-bug-03-achado"><span class="issue-number">ACHADO DO SCANNER</span><h4 id="google-play-bug-03-achado">Problema encontrado</h4><p>O Scanner identificou elementos clicáveis diferentes compartilhando a região <span class="technical-value">[877,117][1012,252]</span>, indicando sobreposição de áreas interativas.</p></section>
+                    <section class="issue-card finding-card impact-card" aria-labelledby="google-play-bug-03-impacto"><span class="issue-number">IMPACTO</span><h4 id="google-play-bug-03-impacto">Impacto na acessibilidade</h4><p>Áreas interativas sobrepostas podem tornar a navegação e a ativação de controles menos previsíveis, especialmente para usuários de tecnologias assistivas.</p></section>
+                    <section class="issue-card finding-card finding-recommendation" aria-labelledby="google-play-bug-03-registro"><span class="issue-number">REGISTRO DO SCANNER</span><h4 id="google-play-bug-03-registro">O que foi identificado</h4><p>Vários itens clicáveis compartilham este local na tela. O item tem a mesma região que outro elemento conflitante.</p></section>
+                    <section class="issue-card finding-card finding-solution" aria-labelledby="google-play-bug-03-solucao"><span class="issue-number">PROPOSTA DA EQUIPE</span><h4 id="google-play-bug-03-solucao">Solução sugerida</h4><p>Revisar a estrutura dos componentes interativos para evitar áreas clicáveis duplicadas ou sobrepostas e garantir que cada ação tenha uma região de interação claramente definida.</p></section>
+                  </div>
+                </div>
+                <figcaption class="evidence-summary-card"><strong>Evidência - itens clicáveis sobrepostos</strong><span>O contorno marca a região compartilhada por dois elementos clicáveis.</span><button class="preview-button evidence-preview-button" type="button" data-preview-src="./bugs/google%20play/screen5.png" aria-label="Ampliar evidência do Bug 03 da Google Play Store">Ampliar evidência</button></figcaption>
+              </figure>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="section section-soft" id="problemas" aria-labelledby="problemas-titulo">
+      <div class="container">
+        <div class="section-heading center reveal"><p class="eyebrow">Síntese da análise</p><h2 id="problemas-titulo">Achados nos três aplicativos</h2><p>Uma visão geral das barreiras confirmadas nos relatórios do Scanner de Acessibilidade.</p></div>
+        <div class="issue-grid summary-grid">
+          <article class="issue-card summary-card reveal"><span class="issue-number">UBER</span><h3>Interação e compreensão</h3><p>Foram registrados problemas de área de toque, contraste do texto e descrições de acessibilidade repetidas.</p><a href="#uber-bug-01">Ver estudos da Uber <span aria-hidden="true">↑</span></a></article>
+          <article class="issue-card summary-card reveal"><span class="issue-number">SHEIN</span><h3>Interação, descrição e adaptação</h3><p>Foram registrados alvos de toque pequenos, descrições faladas repetidas e componentes com dimensões fixas que podem limitar a expansão do texto.</p><a href="#shein-bug-01">Ver estudos da SHEIN <span aria-hidden="true">↑</span></a></article>
+          <article class="issue-card summary-card reveal"><span class="issue-number">GOOGLE PLAY STORE</span><h3>Conteúdo e interação</h3><p>Foram registrados baixo contraste, conteúdo possivelmente indisponível aos serviços de acessibilidade e itens clicáveis sobrepostos.</p><a href="#google-play-bug-01">Ver estudos da Google Play Store <span aria-hidden="true">↑</span></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section conclusion" id="conclusao" aria-labelledby="conclusao-titulo">
+      <div class="container reveal">
+        <p class="eyebrow">Conclusão</p>
+        <h2 id="conclusao-titulo">Acessibilidade se constrói nos detalhes</h2>
+        <p class="conclusion-lead">A análise demonstrou que pequenos detalhes de interface podem criar barreiras significativas de acessibilidade. Ferramentas como o Scanner de Acessibilidade ajudam a identificar esses problemas e fornecem recomendações que podem tornar os aplicativos mais inclusivos, compreensíveis e fáceis de utilizar.</p>
+        <div class="statement-list"><p>Identificar barreiras é o primeiro passo para criar experiências mais inclusivas.</p><p>Ferramentas automatizadas orientam a análise, mas não substituem testes com pessoas.</p></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><p><strong>Análise de Acessibilidade em Aplicativos - 2026</strong></p><p>Desenvolvido para fins acadêmicos.</p></div>
+      <p>Apresentação · <time datetime="2026-08-19">19/08/2026</time></p>
+    </div>
+  </footer>
+
+  <dialog class="screen-preview-dialog" id="screen-preview-dialog" aria-labelledby="screen-preview-title">
+    <div class="screen-preview-toolbar"><h2 id="screen-preview-title">Visualização em tela cheia</h2><button class="screen-preview-close" type="button" data-preview-close aria-label="Fechar visualização em tela cheia">Fechar</button></div>
+    <img id="screen-preview-image" alt="">
+  </dialog>
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <button class="back-to-top" type="button" data-back-to-top aria-label="Voltar ao topo da página" hidden>↑</button>
+</body>
+
+</html>

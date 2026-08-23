@@ -1,0 +1,34 @@
+A lista a seguir contém oportunidades de melhoria na acessibilidade de Google Play Store. Cada item corresponde a uma área delineada na captura de tela anexa.
+
+Itens clicáveis
+[877,117][1012,252]
+Vários itens clicável compartilham este local na tela.
+Este item clicável tem o mesmo local na tela ([877,117][1012,252]) que outros 1 itens com essas propriedades. Elementos conflitantes: View with bounds: [877,117][1012,252].
+
+Itens clicáveis
+[68,443][1013,1152]
+Vários itens acionável compartilham este local na tela.
+Este item clicável e com clique longo tem o mesmo local na tela ([68,443][1013,1152]) que outros 1 itens com essas propriedades. Elementos conflitantes: View with bounds: [68,443][1013,1152].
+
+Rótulo do item
+[68,443][1013,1152]
+O rótulo deste item pode não ser lido por leitores de tela.
+
+Rótulo do item
+[1047,876][1182,1152]
+O rótulo deste item pode não ser lido por leitores de tela.
+
+Rótulo do item
+[0,2117][1080,2118]
+O rótulo deste item pode não ser lido por leitores de tela.
+
+Texto oculto
+[68,443][1013,1152]
+Possíveis textos ocultos detectados, incluindo "O prêmio semanal".
+Este item pode não estar mostrando o conteúdo para os serviços de acessibilidade.
+
+Texto oculto
+[51,1355][1030,2117]
+Possível texto detectado: Your one-stop travel app.
+Garanta que o rótulo de acessibilidade deste item inclua o texto visível.
+

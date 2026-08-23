@@ -1,0 +1,102 @@
+A lista a seguir contém oportunidades de melhoria na acessibilidade de Uber. Cada item corresponde a uma área delineada na captura de tela anexa.
+
+Itens clicáveis
+[45,557][1035,737]
+Vários itens clicável compartilham este local na tela.
+Este item clicável tem o mesmo local na tela ([45,557][1035,737]) que outros 1 itens com essas propriedades. Elementos conflitantes: View with bounds: [45,557][1035,737].
+
+Contraste do texto
+[123,915][244,955]
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 3,77. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #FC2241 e da cor de fundo #292929. Use cores que resultam em uma taxa de contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes.
+
+Contraste do texto
+[45,2043][721,2109]
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 1,18. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #252525 e da cor de fundo #161616. Use cores que resultam em uma taxa de contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes. Este item pode estar coberto por outro conteúdo na tela. Considere testar manualmente o contraste deste item.
+
+Tipo de item não aceito
+[0,0][1080,557]
+O tipo deste item pode não ser compatível.
+O tipo deste item com.uber.rib.core.compose.root.UberComposeView pode não ser processado pelos serviços de acessibilidade. Use um tipo definido pelo SDK do Android.
+
+Tipo de item não aceito
+[0,512][1080,737]
+O tipo deste item pode não ser compatível.
+O tipo deste item com.uber.rib.core.compose.root.UberComposeView pode não ser processado pelos serviços de acessibilidade. Use um tipo definido pelo SDK do Android.
+
+Tipo de item não aceito
+[0,737][1080,1245]
+O tipo deste item pode não ser compatível.
+O tipo deste item com.uber.rib.core.compose.root.UberComposeView pode não ser processado pelos serviços de acessibilidade. Use um tipo definido pelo SDK do Android.
+
+Tipo de item não aceito
+[0,1245][1080,1998]
+O tipo deste item pode não ser compatível.
+O tipo deste item com.uber.rib.core.compose.root.UberComposeView pode não ser processado pelos serviços de acessibilidade. Use um tipo definido pelo SDK do Android.
+
+Tipo de item não aceito
+[0,1998][1080,2340]
+O tipo deste item pode não ser compatível.
+O tipo deste item com.uber.rib.core.compose.root.UberComposeView pode não ser processado pelos serviços de acessibilidade. Use um tipo definido pelo SDK do Android.
+
+Tipo de item não aceito
+[0,1909][1080,2340]
+O tipo deste item pode não ser compatível.
+O tipo deste item com.uber.rib.core.compose.root.UberComposeView pode não ser processado pelos serviços de acessibilidade. Use um tipo definido pelo SDK do Android.
+
+Tipo de item não aceito
+[0,2059][1080,2340]
+O tipo deste item pode não ser compatível.
+O tipo deste item com.uber.rib.core.compose.root.UberComposeView pode não ser processado pelos serviços de acessibilidade. Use um tipo definido pelo SDK do Android.
+
+Texto oculto
+[45,343][1035,512]
+Possível texto detectado: precisar
+Garanta que o rótulo de acessibilidade deste item inclua o texto visível.
+
+Texto oculto
+[45,343][1035,512]
+Possível texto detectado: onde quiser, peçao
+Garanta que o rótulo de acessibilidade deste item inclua o texto visível.
+
+Texto oculto
+[0,737][1080,900]
+Possível texto detectado: Viagem
+Garanta que o rótulo de acessibilidade deste item inclua o texto visível.
+
+Texto oculto
+[0,737][1080,900]
+Possível texto detectado: Moto
+Garanta que o rótulo de acessibilidade deste item inclua o texto visível.
+
+Texto oculto
+[917,765][1052,900]
+Possível texto detectado: 10%
+Garanta que o rótulo de acessibilidade deste item inclua o texto visível.
+
+Texto oculto
+[46,923][275,1222]
+Possível texto detectado: ifegd
+Garanta que o rótulo de acessibilidade deste item inclua o texto visível.
+
+Texto oculto
+[46,923][275,1222]
+Possível texto detectado: iFood
+Garanta que o rótulo de acessibilidade deste item inclua o texto visível.
+
+Texto oculto
+[298,923][528,1222]
+Possível texto detectado: Teens
+Garanta que o rótulo de acessibilidade deste item inclua o texto visível.
+
+Texto oculto
+[551,923][781,1222]
+Possível texto detectado: Seniors
+Garanta que o rótulo de acessibilidade deste item inclua o texto visível.
+
+Texto oculto
+[804,923][1034,1222]
+Possível texto detectado: Enviar itens
+Garanta que o rótulo de acessibilidade deste item inclua o texto visível.
+

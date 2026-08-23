@@ -1,0 +1,7 @@
+A lista a seguir contém oportunidades de melhoria na acessibilidade de Google Play Store. Cada item corresponde a uma área delineada na captura de tela anexa.
+
+Texto oculto
+[68,970][1012,1597]
+Possível texto detectado: acordo com as Políticas de Privacidade deles. Além
+Garanta que o rótulo de acessibilidade deste item inclua o texto visível.
+

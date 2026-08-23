@@ -1,0 +1,22 @@
+A lista a seguir contém oportunidades de melhoria na acessibilidade de Canva. Cada item corresponde a uma área delineada na captura de tela anexa.
+
+Contraste do texto
+[61,171][663,227]
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 1,22. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #133D4A e da cor de fundo #192B42. Use cores que resultam em uma taxa de contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes.
+
+Área de toque
+[45,199][720,286]
+Considere aumentar este item clicável.
+A altura deste item é 31dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[930,185][1049,300]
+Considere aumentar este item clicável.
+O tamanho deste item é 42dp x 41dp. Considere aumentar a largura em 48dp e a altura em 48dp ou mais nesta área de toque. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[180,379][1004,495]
+Considere aumentar este item clicável.
+A altura deste item é 41dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+

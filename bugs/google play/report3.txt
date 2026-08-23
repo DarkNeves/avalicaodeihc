@@ -1,0 +1,22 @@
+A lista a seguir contém oportunidades de melhoria na acessibilidade de Google Play Store. Cada item corresponde a uma área delineada na captura de tela anexa.
+
+Tamanho do texto
+com.android.vending:id/0_resource_name_obfuscated
+A unidade de tamanho de texto do item é dip.
+Este texto é pequeno e pode dificultar a leitura de alguns usuários. Use um texto maior ou especifique o tamanho do texto em escala de pixels (sp).
+
+Contraste da imagem
+[416,230][664,478]
+Considere aumentar a taxa de contraste entre o primeiro plano e o plano de fundo dessa imagem.
+A taxa de contraste da imagem é 2,86. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #E94234 e da cor de fundo #3A3A3D. Considere aumentar essa taxa para 3,00 ou mais. Este item pode estar coberto por outro conteúdo na tela. Considere testar manualmente o contraste deste item.
+
+Contraste do texto
+com.android.vending:id/0_resource_name_obfuscated
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 2,91. Ela é determinada com base na estimativa da cor do primeiro plano #387AFF e da cor de fundo #3A3A3D. Aumente esse valor para 4,50 ou mais.
+
+Texto oculto
+com.android.vending:id/0_resource_name_obfuscated
+Possível texto detectado: +4
+Garanta que o rótulo de acessibilidade deste item inclua o texto visível.
+

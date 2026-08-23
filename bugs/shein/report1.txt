@@ -1,0 +1,312 @@
+A lista a seguir contém oportunidades de melhoria na acessibilidade de SHEIN. Cada item corresponde a uma área delineada na captura de tela anexa.
+
+Tamanho do texto
+com.zzkko:id/shein
+A unidade de tamanho de texto do item é dip.
+Este texto é pequeno e pode dificultar a leitura de alguns usuários. Use um texto maior ou especifique o tamanho do texto em escala de pixels (sp).
+
+Contraste da imagem
+com.zzkko:id/shein
+Considere aumentar a taxa de contraste entre o primeiro plano e o plano de fundo dessa imagem.
+A taxa de contraste da imagem é 1,76. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #BBBBBB e da cor de fundo #F7F5F2. Considere aumentar essa taxa para 3,00 ou mais. Este item pode estar coberto por outro conteúdo na tela. Considere testar manualmente o contraste deste item.
+
+Contraste da imagem
+com.zzkko:id/shein
+Considere aumentar a taxa de contraste entre o primeiro plano e o plano de fundo dessa imagem.
+A taxa de contraste da imagem é 1,89. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #BBBBBB e da cor de fundo #FEFDFC. Considere aumentar essa taxa para 3,00 ou mais. Este item pode estar coberto por outro conteúdo na tela. Considere testar manualmente o contraste deste item.
+
+Contraste da imagem
+com.zzkko:id/shein
+Considere aumentar a taxa de contraste entre o primeiro plano e o plano de fundo dessa imagem.
+A taxa de contraste da imagem é 1,76. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #BBBBBB e da cor de fundo #F7F5F2. Considere aumentar essa taxa para 3,00 ou mais. Este item pode estar coberto por outro conteúdo na tela. Considere testar manualmente o contraste deste item.
+
+Contraste da imagem
+com.zzkko:id/shein
+Considere aumentar a taxa de contraste entre o primeiro plano e o plano de fundo dessa imagem.
+A taxa de contraste da imagem é 2,58. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #949694 e da cor de fundo #EEEFEE. Considere aumentar essa taxa para 3,00 ou mais. Este item pode estar coberto por outro conteúdo na tela. Considere testar manualmente o contraste deste item.
+
+Contraste da imagem
+com.zzkko:id/shein
+Considere aumentar a taxa de contraste entre o primeiro plano e o plano de fundo dessa imagem.
+A taxa de contraste da imagem é 1,70. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #A4A29C e da cor de fundo #D6D2CE. Considere aumentar essa taxa para 3,00 ou mais. Este item pode estar coberto por outro conteúdo na tela. Considere testar manualmente o contraste deste item.
+
+Contraste da imagem
+com.zzkko:id/shein
+Considere aumentar a taxa de contraste entre o primeiro plano e o plano de fundo dessa imagem.
+A taxa de contraste da imagem é 1,39. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #949294 e da cor de fundo #ADAEAD. Considere aumentar essa taxa para 3,00 ou mais. Este item pode estar coberto por outro conteúdo na tela. Considere testar manualmente o contraste deste item.
+
+Contraste da imagem
+com.zzkko:id/shein
+Considere aumentar a taxa de contraste entre o primeiro plano e o plano de fundo dessa imagem.
+A taxa de contraste da imagem é 2,43. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #ADA694 e da cor de fundo #FFFFFF. Considere aumentar essa taxa para 3,00 ou mais. Este item pode estar coberto por outro conteúdo na tela. Considere testar manualmente o contraste deste item.
+
+Contraste da imagem
+com.zzkko:id/shein
+Considere aumentar a taxa de contraste entre o primeiro plano e o plano de fundo dessa imagem.
+A taxa de contraste da imagem é 2,79. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #9C9A9C e da cor de fundo #FFFFFF. Considere aumentar essa taxa para 3,00 ou mais. Este item pode estar coberto por outro conteúdo na tela. Considere testar manualmente o contraste deste item.
+
+Contraste da imagem
+com.zzkko:id/shein
+Considere aumentar a taxa de contraste entre o primeiro plano e o plano de fundo dessa imagem.
+A taxa de contraste da imagem é 2,23. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #ADAEAD e da cor de fundo #FFFFFF. Considere aumentar essa taxa para 3,00 ou mais. Este item pode estar coberto por outro conteúdo na tela. Considere testar manualmente o contraste deste item.
+
+Contraste da imagem
+com.zzkko:id/shein
+Considere aumentar a taxa de contraste entre o primeiro plano e o plano de fundo dessa imagem.
+A taxa de contraste da imagem é 1,14. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #C4B79C e da cor de fundo #BDAA8B. Considere aumentar essa taxa para 3,00 ou mais. Este item pode estar coberto por outro conteúdo na tela. Considere testar manualmente o contraste deste item.
+
+Contraste da imagem
+com.zzkko:id/shein
+Considere aumentar a taxa de contraste entre o primeiro plano e o plano de fundo dessa imagem.
+A taxa de contraste da imagem é 2,06. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #9C8A7B e da cor de fundo #D6CABD. Considere aumentar essa taxa para 3,00 ou mais. Este item pode estar coberto por outro conteúdo na tela. Considere testar manualmente o contraste deste item.
+
+Contraste do texto
+com.zzkko:id/shein
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 3,58. Ela é determinada com base na estimativa da cor do primeiro plano #FFFFFF e da cor de fundo #FE3A30. Aumente esse valor para 4,50 ou mais.
+
+Contraste do texto
+com.zzkko:id/shein
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 2,06. Ela é determinada com base na estimativa da cor do primeiro plano #FF8E1B e da cor de fundo #FFF0E2. Aumente esse valor para 4,50 ou mais.
+
+Contraste do texto
+android:id/text1
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 4,18. Ela é determinada com base na estimativa da cor do primeiro plano #857A72 e da cor de fundo #FFFFFF. Aumente esse valor para 4,50 ou mais.
+
+Contraste do texto
+android:id/text1
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 4,18. Ela é determinada com base na estimativa da cor do primeiro plano #857A72 e da cor de fundo #FFFFFF. Aumente esse valor para 4,50 ou mais.
+
+Contraste do texto
+android:id/text1
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 4,11. Ela é determinada com base na estimativa da cor do primeiro plano #877B72 e da cor de fundo #FFFFFF. Aumente esse valor para 4,50 ou mais.
+
+Contraste do texto
+android:id/text1
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 4,38. Ela é determinada com base na estimativa da cor do primeiro plano #81776D e da cor de fundo #FFFFFF. Aumente esse valor para 4,50 ou mais.
+
+Contraste do texto
+com.zzkko:id/shein
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 3,73. Ela é determinada com base na estimativa da cor do primeiro plano #FFFFFF e da cor de fundo #F93A01. Aumente esse valor para 4,50 ou mais.
+
+Descrições de itens
+com.zzkko:id/shein
+Vários itens têm a mesma descrição.
+O texto falado deste item clicável: "Plus Size" é idêntico a outros 1 itens.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta TextView tem altura fixa e texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta TextView tem altura fixa e texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta TextView tem tamanho fixo e texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta TextView tem tamanho fixo e texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta TextView tem tamanho fixo e texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta TextView tem tamanho fixo e texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta TextView tem tamanho fixo e texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta TextView tem tamanho fixo e texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta TextView tem tamanho fixo e texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta TextView tem tamanho fixo e texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+[8,218][239,325]
+Esta ViewGroup tem largura fixa e contém uma TextView com texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+[239,218][549,325]
+Esta ViewGroup tem largura fixa e contém uma TextView com texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+[549,218][761,325]
+Esta ViewGroup tem largura fixa e contém uma TextView com texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+[761,218][946,325]
+Esta ViewGroup tem largura fixa e contém uma TextView com texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta ViewGroup tem largura fixa e contém uma TextView com texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Área de toque
+com.zzkko:id/shein
+Considere aumentar este item clicável.
+O tamanho deste item é 36dp x 40dp. Considere aumentar a largura em 48dp e a altura em 48dp ou mais nesta área de toque. Um contêiner com filhos pode estar processando eventos de toque para este item. Se a seleção do maior contêiner executar a mesma ação que a seleção desse item, considere definir o item como não clicável. Se uma ação diferente for executada, considere aumentar o tamanho deste item.
+
+Área de toque
+com.zzkko:id/shein
+Considere aumentar este item clicável.
+O tamanho deste item é 36dp x 40dp. Considere aumentar a largura em 48dp e a altura em 48dp ou mais nesta área de toque. Um contêiner com filhos pode estar processando eventos de toque para este item. Se a seleção do maior contêiner executar a mesma ação que a seleção desse item, considere definir o item como não clicável. Se uma ação diferente for executada, considere aumentar o tamanho deste item.
+
+Área de toque
+com.zzkko:id/shein
+Considere aumentar este item clicável.
+A altura deste item é 36dp. Considere definir a altura desta área de toque como 48dp ou maior. Um contêiner com filhos pode estar processando eventos de toque para este item. Se a seleção do maior contêiner executar a mesma ação que a seleção desse item, considere definir o item como não clicável. Se uma ação diferente for executada, considere aumentar o tamanho deste item.
+
+Área de toque
+[230,111][726,212]
+Considere aumentar este item clicável.
+A altura deste item é 36dp. Considere definir a altura desta área de toque como 48dp ou maior. Um contêiner com filhos pode estar processando eventos de toque para este item. Se a seleção do maior contêiner executar a mesma ação que a seleção desse item, considere definir o item como não clicável. Se uma ação diferente for executada, considere aumentar o tamanho deste item.
+
+Área de toque
+[726,111][816,212]
+Considere aumentar este item clicável.
+O tamanho deste item é 32dp x 36dp. Considere aumentar a largura em 48dp e a altura em 48dp ou mais nesta área de toque. Um contêiner com filhos pode estar processando eventos de toque para este item. Se a seleção do maior contêiner executar a mesma ação que a seleção desse item, considere definir o item como não clicável. Se uma ação diferente for executada, considere aumentar o tamanho deste item.
+
+Área de toque
+[816,122][940,200]
+Considere aumentar este item clicável.
+O tamanho deste item é 44dp x 28dp. Considere aumentar a largura em 48dp e a altura em 48dp ou mais nesta área de toque. Um contêiner com filhos pode estar processando eventos de toque para este item. Se a seleção do maior contêiner executar a mesma ação que a seleção desse item, considere definir o item como não clicável. Se uma ação diferente for executada, considere aumentar o tamanho deste item.
+
+Área de toque
+com.zzkko:id/mainWish
+Considere aumentar este item clicável.
+O tamanho deste item é 36dp x 40dp. Considere aumentar a largura em 48dp e a altura em 48dp ou mais nesta área de toque. Um contêiner com filhos pode estar processando eventos de toque para este item. Se a seleção do maior contêiner executar a mesma ação que a seleção desse item, considere definir o item como não clicável. Se uma ação diferente for executada, considere aumentar o tamanho deste item.
+
+Área de toque
+[8,218][239,325]
+Considere aumentar este item clicável.
+A altura deste item é 38dp. Considere definir a altura desta área de toque como 48dp ou maior. Um contêiner com filhos pode estar processando eventos de toque para este item. Se a seleção do maior contêiner executar a mesma ação que a seleção desse item, considere definir o item como não clicável. Se uma ação diferente for executada, considere aumentar o tamanho deste item.
+
+Área de toque
+[239,218][549,325]
+Considere aumentar este item clicável.
+A altura deste item é 38dp. Considere definir a altura desta área de toque como 48dp ou maior. Um contêiner com filhos pode estar processando eventos de toque para este item. Se a seleção do maior contêiner executar a mesma ação que a seleção desse item, considere definir o item como não clicável. Se uma ação diferente for executada, considere aumentar o tamanho deste item.
+
+Área de toque
+[549,218][761,325]
+Considere aumentar este item clicável.
+A altura deste item é 38dp. Considere definir a altura desta área de toque como 48dp ou maior. Um contêiner com filhos pode estar processando eventos de toque para este item. Se a seleção do maior contêiner executar a mesma ação que a seleção desse item, considere definir o item como não clicável. Se uma ação diferente for executada, considere aumentar o tamanho deste item.
+
+Área de toque
+[761,218][946,325]
+Considere aumentar este item clicável.
+A altura deste item é 38dp. Considere definir a altura desta área de toque como 48dp ou maior. Um contêiner com filhos pode estar processando eventos de toque para este item. Se a seleção do maior contêiner executar a mesma ação que a seleção desse item, considere definir o item como não clicável. Se uma ação diferente for executada, considere aumentar o tamanho deste item.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta TextView tem altura fixa e texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta TextView tem altura fixa e texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta TextView tem tamanho fixo e texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta TextView tem tamanho fixo e texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta TextView tem tamanho fixo e texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta TextView tem tamanho fixo e texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta TextView tem tamanho fixo e texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta TextView tem tamanho fixo e texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta TextView tem tamanho fixo e texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta ViewGroup tem altura fixa e contém uma TextView com texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+[946,218][1080,325]
+Esta ViewGroup tem largura fixa e contém uma TextView com texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto. Este item pode estar apenas parcialmente visível dentro de um contêiner de rolagem.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta ViewGroup tem largura fixa e contém uma TextView com texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta ViewGroup tem largura fixa e contém uma TextView com texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+[648,2136][864,2298]
+Esta ViewGroup tem largura fixa e contém uma TextView com texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Tamanho do texto
+com.zzkko:id/shein
+Esta ViewGroup tem largura fixa e contém uma TextView com texto que pode ser aumentado.
+Modifique LayoutParams para permitir a expansão de texto.
+
+Texto oculto
+[23,325][1057,723]
+Possíveis textos ocultos detectados, incluindo "SALE".
+Este item pode não estar mostrando o conteúdo para os serviços de acessibilidade.
+

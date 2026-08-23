@@ -1,0 +1,47 @@
+A lista a seguir contém oportunidades de melhoria na acessibilidade de Canva. Cada item corresponde a uma área delineada na captura de tela anexa.
+
+Contraste do texto
+[61,171][407,227]
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 1,38. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #124652 e da cor de fundo #192B42. Use cores que resultam em uma taxa de contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes.
+
+Contraste do texto
+[61,171][663,227]
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 1,34. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #114551 e da cor de fundo #1A2C46. Use cores que resultam em uma taxa de contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes.
+
+Contraste do texto
+[61,171][495,227]
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 1,34. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #114551 e da cor de fundo #1A2C46. Use cores que resultam em uma taxa de contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes.
+
+Área de toque
+[45,199][419,286]
+Considere aumentar este item clicável.
+A altura deste item é 31dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[180,379][1004,495]
+Considere aumentar este item clicável.
+A altura deste item é 41dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[64,548][452,663]
+Considere aumentar este item clicável.
+A altura deste item é 41dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[469,548][885,663]
+Considere aumentar este item clicável.
+A altura deste item é 41dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[393,1814][464,1884]
+Considere aumentar este item clicável.
+O tamanho deste item é 25dp x 25dp. Considere aumentar a largura em 48dp e a altura em 48dp ou mais nesta área de toque. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[883,1814][953,1884]
+Considere aumentar este item clicável.
+O tamanho deste item é 25dp x 25dp. Considere aumentar a largura em 48dp e a altura em 48dp ou mais nesta área de toque. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+

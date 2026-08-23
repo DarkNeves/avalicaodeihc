@@ -1,0 +1,321 @@
+
+/* ============================================
+   1. Hero & SVG Illustration
+   ============================================ */
+.hero { padding-top: 0; }
+.hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.2; max-width: 520px; }
+.hero-grid { display: grid; gap: 2.5rem; align-items: center; }
+@media (min-width: 900px) {
+  .hero-grid { grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr); }
+}
+.hero-visual { display: flex; justify-content: flex-end; align-items: center; }
+.ihc-illustration { width: 100%; max-width: 440px; height: auto; display: block; margin: 0; }
+
+/* ============================================
+   2. Team Section (no green decorative borders)
+   ============================================ */
+.team-section { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1rem; }
+.members-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+.team-member, .meta-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.member-label { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 0.25rem; font-weight: 700; }
+.team-member strong, .meta-item strong { display: block; font-size: 1.05rem; color: var(--text); }
+.hero-meta { display: flex; gap: 1rem; flex-wrap: wrap; }
+.hero-meta .meta-item { flex: 1; min-width: 200px; background: var(--surface-soft); }
+.hero-meta .date-item { flex: 0 1 auto; background: var(--surface-soft); }
+
+/* Legacy dark info-tags */
+.section-dark .info-tag { background: rgba(255, 255, 255, 0.05); color: #c5d4ca; }
+.section-dark .info-tag strong { color: #fff; }
+.section-dark p { color: #c5d4ca; }
+
+/* ============================================
+   3. Grid utilities
+   ============================================ */
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+
+/* Indicators row (Sobre a Avaliação) */
+.indicators-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem; }
+@media (min-width: 768px) {
+  .indicators-row { grid-template-columns: repeat(4, 1fr); }
+}
+.indicators-row .card { padding: 1.5rem 1rem; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.indicators-row .card h3 { margin-top: 0; font-size: 2.5rem; color: var(--green); margin-bottom: 0.2rem; line-height: 1; }
+.indicators-row .card p { margin: 0; font-weight: 600; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.05em; color: var(--muted); }
+
+/* ============================================
+   4. Base card (NO green decorative border)
+   ============================================ */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+.section-dark .card { background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.1); }
+.section-dark .card h3 { color: #fff; }
+.card h3 { margin-top: 0; font-size: 1.2rem; }
+.card ul { padding-left: 1.2rem; color: var(--muted); }
+.section-dark .card ul { color: #c5d4ca; }
+
+/* ============================================
+   5. Tasks grid
+   ============================================ */
+.tasks-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2rem; }
+.tasks-grid .task-card { width: 100%; min-width: 260px; }
+@media (min-width: 768px) {
+  .tasks-grid .task-card { width: calc(50% - 1rem); }
+}
+@media (min-width: 992px) {
+  .tasks-grid .task-card { width: calc(33.333% - 1.34rem); }
+}
+
+.task-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.task-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.task-num { position: absolute; top: 10px; right: 15px; font-size: 3.5rem; font-weight: 900; color: var(--border); line-height: 1; z-index: 1; opacity: 0.4; }
+.task-card-content { position: relative; z-index: 2; }
+.task-card h3 { margin: 0 0 0.5rem; font-size: 1.1rem; }
+.task-card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+/* ============================================
+   6. Percurso Visual – 2-column card grid
+   ============================================ */
+.visual-timeline {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+@media (min-width: 768px) {
+  .visual-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #percurso > .container {
+    width: min(calc(100% - 2rem), 1240px);
+  }
+  /* Center the last item when it's odd (7th card) */
+  .visual-timeline .visual-item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: calc((100% - 2rem) / 2);
+    justify-self: center;
+  }
+}
+
+.visual-item.card {
+  display: grid;
+  grid-template-columns: minmax(0, 44%) minmax(0, 56%);
+  padding: 0;
+  overflow: hidden;
+}
+
+.visual-img-container {
+  background: var(--surface-soft);
+  border: none;
+  border-right: 1px solid var(--border);
+  border-radius: 0;
+  padding: 1rem 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  max-width: 100%;
+  cursor: zoom-in;
+  transition: opacity 0.3s ease;
+}
+.visual-img-container:hover { opacity: 0.9; }
+.visual-img-container img {
+  max-height: 360px;
+  width: auto;
+  max-width: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+}
+.visual-info { min-width: 0; padding: 1.25rem 1.1rem; align-self: center; }
+.visual-info h3 { margin-top: 0; margin-bottom: 0.5rem; font-size: 1.25rem; }
+.visual-info p { color: var(--muted); font-size: 0.95rem; margin-bottom: 0.4rem; }
+.visual-info .step-indicator { display: inline-block; background: var(--green-light); color: var(--green-dark); padding: 0.2rem 0.6rem; border-radius: 999px; font-weight: bold; font-size: 0.8rem; margin-bottom: 1rem; }
+.visual-expand-button {
+  margin-top: 1rem;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--green-dark);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.visual-expand-button:hover { background: var(--green-light); }
+
+/* ============================================
+   7. Lightbox Modal
+   ============================================ */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 22, 18, 0.95);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.lightbox.active { opacity: 1; pointer-events: auto; }
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  object-fit: contain;
+}
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* ============================================
+   8. Tabela com agrupamento de participantes
+   ============================================ */
+.table-responsive { overflow-x: auto; margin-top: 2rem; background: var(--surface); border-radius: var(--radius); border: 1px solid var(--border); }
+table { width: 100%; border-collapse: collapse; text-align: left; min-width: 580px; }
+th, td { padding: 0.85rem 1rem; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+th { background: var(--surface-soft); font-weight: 700; color: var(--text); position: sticky; top: 0; z-index: 1; }
+tr:last-child td { border-bottom: none; }
+
+/* Participant grouping */
+.participant-group-start td { border-top: 3px solid var(--border); }
+.participant-group-start:first-child td { border-top: none; }
+.participant-name-cell {
+  font-weight: 700;
+  vertical-align: middle;
+  text-align: center;
+  background: var(--surface-soft);
+  border-right: 1px solid var(--border);
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+/* Alternate group backgrounds */
+tr:nth-child(n+5):nth-child(-n+8) td:not(.participant-name-cell),
+tr:nth-child(n+13):nth-child(-n+16) td:not(.participant-name-cell) {
+  background: var(--surface-soft);
+}
+
+/* Keep participant grouping unchanged when rows are hovered */
+#results-table-body tr,
+#results-table-body tr > td {
+  transition: none;
+}
+#results-table-body tr:hover,
+#results-table-body tr:hover > td {
+  color: inherit;
+  border-color: var(--border);
+  background-color: transparent;
+  box-shadow: none;
+  transform: none;
+  animation: none;
+}
+#results-table-body tr:hover > .participant-name-cell,
+#results-table-body tr:nth-child(n+5):nth-child(-n+8):hover > td:not(.participant-name-cell),
+#results-table-body tr:nth-child(n+13):nth-child(-n+16):hover > td:not(.participant-name-cell) {
+  background-color: var(--surface-soft);
+}
+
+/* ============================================
+   9. Indicadores de resultado
+   ============================================ */
+.indicators-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem; }
+.indicator-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.indicator-card .val { font-size: 2.5rem; font-weight: 800; color: var(--green); line-height: 1; margin-bottom: 0.5rem; }
+.indicator-card .lbl { font-size: 0.85rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* ============================================
+   10. Gráficos HTML/CSS
+   ============================================ */
+.chart-container { margin-top: 3rem; }
+.chart-grid,
+.discussion-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.chart-wrapper { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; margin-bottom: 2rem; }
+.chart-title { font-weight: 700; margin-bottom: 1.5rem; font-size: 1.1rem; }
+.bar-chart { display: flex; flex-direction: column; gap: 1rem; }
+.bar-row { display: grid; grid-template-columns: 80px 1fr 50px; gap: 1rem; align-items: center; }
+.bar-label { font-weight: 600; font-size: 0.9rem; }
+.bar-track { background: var(--surface-soft); height: 24px; border-radius: 4px; overflow: hidden; width: 100%; position: relative; }
+.bar-fill { background: var(--green); height: 100%; border-radius: 4px; transition: width 1s ease-out; width: 0; }
+.bar-val { font-size: 0.9rem; font-weight: 600; color: var(--muted); text-align: right; }
+
+.chart-wrapper.highlight .bar-fill { background: var(--warning); } /* Destacar Tarefa 4 */
+
+/* ============================================
+   11. Tags de teoria e footer
+   ============================================ */
+.theory-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+.theory-tag { background: var(--green-light); color: var(--green-dark); padding: 0.4rem 0.8rem; border-radius: 999px; font-size: 0.8rem; font-weight: 600; }
+
+.site-footer { background: var(--text); color: var(--surface-soft); padding: 3rem 0; text-align: center; margin-top: 4rem; }
+.site-footer p { margin: 0; opacity: 0.7; font-size: 0.9rem; }
+
+/* ============================================
+   12. Reveal Animations
+   ============================================ */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ============================================
+   13. Mobile overrides
+   ============================================ */
+@media (max-width: 768px) {
+  .site-nav { display: none; }
+  .hero { padding-top: 0; padding-bottom: 2rem; }
+  .hero-grid { row-gap: 1.5rem; padding-top: 1.75rem; }
+  .hero h1 { font-size: 1.5rem; }
+  .ihc-illustration { max-width: 280px; }
+  .hero-visual { order: 1; justify-content: center; min-height: 0; }
+  .hero-text { order: 0; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .chart-grid, .discussion-grid { grid-template-columns: 1fr; }
+  .visual-item.card { grid-template-columns: 1fr; }
+  .visual-img-container { border-right: 0; border-bottom: 1px solid var(--border); }
+  .visual-img-container img { max-width: 220px; max-height: 360px; }
+}

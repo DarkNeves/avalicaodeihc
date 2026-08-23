@@ -1,0 +1,629 @@
+{
+  "generatedAt": "2026-08-09T01:10:48.490Z",
+  "source": "Relatórios HTML originais do Lighthouse em /documentos",
+  "sites": {
+    "equipe": {
+      "id": "equipe",
+      "name": "Tipos de Interfaces de Usuário",
+      "requestedUrl": "https://darkneves.github.io/Tipos-de-interfaces-de-usuario/index.html",
+      "finalUrl": "https://darkneves.github.io/Tipos-de-interfaces-de-usuario/index.html",
+      "reportFile": "documentos/darkneves.github.io-20260808T202926.html",
+      "screenshot": "img/sites/equipe.jpg",
+      "lighthouseVersion": "13.4.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100
+      },
+      "warnings": [],
+      "accessibilityAudits": [
+        {
+          "id": "focusable-controls",
+          "title": "Interactive controls are keyboard focusable",
+          "description": "Custom interactive controls are keyboard focusable and display a focus indicator. [Learn how to make custom controls focusable](https://developer.chrome.com/docs/lighthouse/accessibility/focusable-controls/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "interactive-element-affordance",
+          "title": "Interactive elements indicate their purpose and state",
+          "description": "Interactive elements, such as links and buttons, should indicate their state and be distinguishable from non-interactive elements. [Learn how to decorate interactive elements with affordance hints](https://developer.chrome.com/docs/lighthouse/accessibility/interactive-element-affordance/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "logical-tab-order",
+          "title": "The page has a logical tab order",
+          "description": "Tabbing through the page follows the visual layout. Users cannot focus elements that are offscreen. [Learn more about logical tab ordering](https://developer.chrome.com/docs/lighthouse/accessibility/logical-tab-order/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "visual-order-follows-dom",
+          "title": "Visual order on the page follows DOM order",
+          "description": "DOM order matches the visual order, improving navigation for assistive technology. [Learn more about DOM and visual ordering](https://developer.chrome.com/docs/lighthouse/accessibility/visual-order-follows-dom/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "focus-traps",
+          "title": "User focus is not accidentally trapped in a region",
+          "description": "A user can tab into and out of any control or region without accidentally trapping their focus. [Learn how to avoid focus traps](https://developer.chrome.com/docs/lighthouse/accessibility/focus-traps/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "managed-focus",
+          "title": "The user's focus is directed to new content added to the page",
+          "description": "If new content, such as a dialog, is added to the page, the user's focus is directed to it. [Learn how to direct focus to new content](https://developer.chrome.com/docs/lighthouse/accessibility/managed-focus/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "use-landmarks",
+          "title": "HTML5 landmark elements are used to improve navigation",
+          "description": "Landmark elements (`<main>`, `<nav>`, etc.) are used to improve the keyboard navigation of the page for assistive technology. [Learn more about landmark elements](https://developer.chrome.com/docs/lighthouse/accessibility/use-landmarks/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "offscreen-content-hidden",
+          "title": "Offscreen content is hidden from assistive technology",
+          "description": "Offscreen content is hidden with display: none or aria-hidden=true. [Learn how to properly hide offscreen content](https://developer.chrome.com/docs/lighthouse/accessibility/offscreen-content-hidden/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "custom-controls-labels",
+          "title": "Custom controls have associated labels",
+          "description": "Custom interactive controls have associated labels, provided by aria-label or aria-labelledby. [Learn more about custom controls and labels](https://developer.chrome.com/docs/lighthouse/accessibility/custom-controls-labels/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "custom-controls-roles",
+          "title": "Custom controls have ARIA roles",
+          "description": "Custom interactive controls have appropriate ARIA roles. [Learn how to add roles to custom controls](https://developer.chrome.com/docs/lighthouse/accessibility/custom-control-roles/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "title": "Elements with visible text labels do not have matching accessible names.",
+          "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. [Learn more about accessible names](https://dequeuniversity.com/rules/axe/4.12/label-content-name-mismatch).",
+          "score": 0,
+          "weight": 0,
+          "mode": "binary",
+          "itemCount": 1,
+          "examples": [
+            {
+              "label": "MOD 4",
+              "selector": "div.container > div > p > button.controle-scroll-suave",
+              "snippet": "<button class=\"controle-scroll-suave\" type=\"button\" aria-pressed=\"false\" aria-label=\"Desativar rolagem suave\">",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "dimensions": {
+                "width": 46,
+                "height": 23
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "govbr": {
+      "id": "govbr",
+      "name": "GOV.BR",
+      "requestedUrl": "https://www.gov.br/pt-br",
+      "finalUrl": "https://www.gov.br/pt-br",
+      "reportFile": "documentos/www.gov.br-20260808T202500.html",
+      "screenshot": "img/sites/govbr.jpg",
+      "lighthouseVersion": "13.4.0",
+      "scores": {
+        "performance": 54,
+        "accessibility": 92,
+        "bestPractices": 58,
+        "seo": 100
+      },
+      "warnings": [],
+      "accessibilityAudits": [
+        {
+          "id": "button-name",
+          "title": "Buttons do not have an accessible name",
+          "description": "When a button doesn't have an accessible name, screen readers announce it as \"button\", making it unusable for users who rely on screen readers. [Learn how to make buttons more accessible](https://dequeuniversity.com/rules/axe/4.12/button-name).",
+          "score": 0,
+          "weight": 10,
+          "mode": "binary",
+          "itemCount": 1,
+          "examples": [
+            {
+              "label": "div.wrapper-login > div.header-sign-in > div.cta-wrapper > button.br-sign-in",
+              "selector": "div.wrapper-login > div.header-sign-in > div.cta-wrapper > button.br-sign-in",
+              "snippet": "<button class=\"br-sign-in small primary ml-2 false svelte-qdqhy1\" type=\"button\">",
+              "explanation": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+              "dimensions": {
+                "width": 104,
+                "height": 32
+              }
+            }
+          ]
+        },
+        {
+          "id": "target-size",
+          "title": "Touch targets do not have sufficient size or spacing.",
+          "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.12/target-size).",
+          "score": 0,
+          "weight": 7,
+          "mode": "binary",
+          "itemCount": 7,
+          "examples": [
+            {
+              "label": "Go to slide 1",
+              "selector": "div.cover-list-tile > div.swiper-container > div.swiper-pagination-tile-perfis > span.swiper-pagination-bullet",
+              "snippet": "<span class=\"swiper-pagination-bullet swiper-pagination-bullet-active\" tabindex=\"0\" role=\"button\" aria-label=\"Go to slide 1\">",
+              "explanation": "Fix any of the following:\n  Target has insufficient size (8px by 8px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 8px instead of at least 24px.",
+              "dimensions": {
+                "width": 8,
+                "height": 8
+              }
+            },
+            {
+              "label": "Go to slide 2",
+              "selector": "div.cover-list-tile > div.swiper-container > div.swiper-pagination-tile-perfis > span.swiper-pagination-bullet",
+              "snippet": "<span class=\"swiper-pagination-bullet\" tabindex=\"0\" role=\"button\" aria-label=\"Go to slide 2\">",
+              "explanation": "Fix any of the following:\n  Target has insufficient size (8px by 8px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 8px instead of at least 24px.",
+              "dimensions": {
+                "width": 8,
+                "height": 8
+              }
+            },
+            {
+              "label": "Go to slide 3",
+              "selector": "div.cover-list-tile > div.swiper-container > div.swiper-pagination-tile-perfis > span.swiper-pagination-bullet",
+              "snippet": "<span class=\"swiper-pagination-bullet\" tabindex=\"0\" role=\"button\" aria-label=\"Go to slide 3\">",
+              "explanation": "Fix any of the following:\n  Target has insufficient size (8px by 8px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 8px instead of at least 24px.",
+              "dimensions": {
+                "width": 8,
+                "height": 8
+              }
+            },
+            {
+              "label": "Go to slide 4",
+              "selector": "div.cover-list-tile > div.swiper-container > div.swiper-pagination-tile-perfis > span.swiper-pagination-bullet",
+              "snippet": "<span class=\"swiper-pagination-bullet\" tabindex=\"0\" role=\"button\" aria-label=\"Go to slide 4\">",
+              "explanation": "Fix any of the following:\n  Target has insufficient size (8px by 8px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 8px instead of at least 24px.",
+              "dimensions": {
+                "width": 8,
+                "height": 8
+              }
+            },
+            {
+              "label": "Go to slide 5",
+              "selector": "div.cover-list-tile > div.swiper-container > div.swiper-pagination-tile-perfis > span.swiper-pagination-bullet",
+              "snippet": "<span class=\"swiper-pagination-bullet\" tabindex=\"0\" role=\"button\" aria-label=\"Go to slide 5\">",
+              "explanation": "Fix any of the following:\n  Target has insufficient size (8px by 8px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 8px instead of at least 24px.",
+              "dimensions": {
+                "width": 8,
+                "height": 8
+              }
+            }
+          ]
+        },
+        {
+          "id": "focusable-controls",
+          "title": "Interactive controls are keyboard focusable",
+          "description": "Custom interactive controls are keyboard focusable and display a focus indicator. [Learn how to make custom controls focusable](https://developer.chrome.com/docs/lighthouse/accessibility/focusable-controls/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "interactive-element-affordance",
+          "title": "Interactive elements indicate their purpose and state",
+          "description": "Interactive elements, such as links and buttons, should indicate their state and be distinguishable from non-interactive elements. [Learn how to decorate interactive elements with affordance hints](https://developer.chrome.com/docs/lighthouse/accessibility/interactive-element-affordance/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "logical-tab-order",
+          "title": "The page has a logical tab order",
+          "description": "Tabbing through the page follows the visual layout. Users cannot focus elements that are offscreen. [Learn more about logical tab ordering](https://developer.chrome.com/docs/lighthouse/accessibility/logical-tab-order/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "visual-order-follows-dom",
+          "title": "Visual order on the page follows DOM order",
+          "description": "DOM order matches the visual order, improving navigation for assistive technology. [Learn more about DOM and visual ordering](https://developer.chrome.com/docs/lighthouse/accessibility/visual-order-follows-dom/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "focus-traps",
+          "title": "User focus is not accidentally trapped in a region",
+          "description": "A user can tab into and out of any control or region without accidentally trapping their focus. [Learn how to avoid focus traps](https://developer.chrome.com/docs/lighthouse/accessibility/focus-traps/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "managed-focus",
+          "title": "The user's focus is directed to new content added to the page",
+          "description": "If new content, such as a dialog, is added to the page, the user's focus is directed to it. [Learn how to direct focus to new content](https://developer.chrome.com/docs/lighthouse/accessibility/managed-focus/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "use-landmarks",
+          "title": "HTML5 landmark elements are used to improve navigation",
+          "description": "Landmark elements (`<main>`, `<nav>`, etc.) are used to improve the keyboard navigation of the page for assistive technology. [Learn more about landmark elements](https://developer.chrome.com/docs/lighthouse/accessibility/use-landmarks/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "offscreen-content-hidden",
+          "title": "Offscreen content is hidden from assistive technology",
+          "description": "Offscreen content is hidden with display: none or aria-hidden=true. [Learn how to properly hide offscreen content](https://developer.chrome.com/docs/lighthouse/accessibility/offscreen-content-hidden/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "custom-controls-labels",
+          "title": "Custom controls have associated labels",
+          "description": "Custom interactive controls have associated labels, provided by aria-label or aria-labelledby. [Learn more about custom controls and labels](https://developer.chrome.com/docs/lighthouse/accessibility/custom-controls-labels/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "custom-controls-roles",
+          "title": "Custom controls have ARIA roles",
+          "description": "Custom interactive controls have appropriate ARIA roles. [Learn how to add roles to custom controls](https://developer.chrome.com/docs/lighthouse/accessibility/custom-control-roles/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "label-content-name-mismatch",
+          "title": "Elements with visible text labels do not have matching accessible names.",
+          "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. [Learn more about accessible names](https://dequeuniversity.com/rules/axe/4.12/label-content-name-mismatch).",
+          "score": 0,
+          "weight": 0,
+          "mode": "binary",
+          "itemCount": 1,
+          "examples": [
+            {
+              "label": "Atalhos gov.br",
+              "selector": "div.wrapper > div.wrapper > div.button-badge > button.br-button",
+              "snippet": "<button class=\"br-button secondary px-2x ml-2 small false false slideBarAnonima svelte-2a…\" type=\"button\" aria-label=\"Abrir menu de seleção serviços\">",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name",
+              "dimensions": {
+                "width": 171,
+                "height": 32
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "mercadolivre": {
+      "id": "mercadolivre",
+      "name": "Mercado Livre",
+      "requestedUrl": "https://www.mercadolivre.com.br/",
+      "finalUrl": "https://www.mercadolivre.com.br/",
+      "reportFile": "documentos/www.mercadolivre.com.br-20260808T202754.html",
+      "screenshot": "img/sites/mercadolivre.jpg",
+      "lighthouseVersion": "13.4.0",
+      "scores": {
+        "performance": 68,
+        "accessibility": 89,
+        "bestPractices": 54,
+        "seo": 100
+      },
+      "warnings": [
+        "Chrome extensions negatively affected this page's load performance. Try auditing the page in incognito mode or from a Chrome profile without extensions."
+      ],
+      "accessibilityAudits": [
+        {
+          "id": "color-contrast",
+          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+          "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.12/color-contrast).",
+          "score": 0,
+          "weight": 7,
+          "mode": "binary",
+          "itemCount": 25,
+          "examples": [
+            {
+              "label": "Frete grátis e rápido",
+              "selector": "section.news-row > div#_R_18ja_ > p.font-color--BLACK > span.font-color--GREEN",
+              "snippet": "<span class=\"font-color--GREEN font-size--XXSMALL font-family--SEMIBOLD\">",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.19 (foreground color: #00a650, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "dimensions": {
+                "width": 108,
+                "height": 18
+              }
+            },
+            {
+              "label": "GRÁTIS",
+              "selector": "div.quick-access-item__content > div.andes-thumbnail-container > div#_R_khoja_-thumbnail-badge > p.andes-badge__content",
+              "snippet": "<p class=\"andes-badge__content\">",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.19 (foreground color: #ffffff, background color: #00a650, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "dimensions": {
+                "width": 49,
+                "height": 16
+              }
+            },
+            {
+              "label": "FRETE GRÁTIS",
+              "selector": "div > div#_R_1i8ja_ > div.main > p.title",
+              "snippet": "<p class=\"title\" style=\"color:#00A650\">",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.19 (foreground color: #00a650, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "dimensions": {
+                "width": 120,
+                "height": 15
+              }
+            },
+            {
+              "label": "Mostrar produtos",
+              "selector": "li.andes-carousel-free__slide > div > div#_R_1i8ja_ > a.action",
+              "snippet": "<a href=\"https://www.mercadolivre.com.br/ofertas/frete-gratis#da_id=free_shipping_n…\" class=\"action\">",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.63 (foreground color: #ffffff, background color: #3483fa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "dimensions": {
+                "width": 120,
+                "height": 26
+              }
+            },
+            {
+              "label": "MENOS DE R$100",
+              "selector": "div > div#_R_2i8ja_ > div.main > p.title",
+              "snippet": "<p class=\"title\">",
+              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.63 (foreground color: #3483fa, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+              "dimensions": {
+                "width": 120,
+                "height": 15
+              }
+            }
+          ]
+        },
+        {
+          "id": "link-in-text-block",
+          "title": "Links rely on color to be distinguishable.",
+          "description": "Low-contrast text is difficult or impossible for many users to read. Link text that is discernible improves the experience for users with low vision. [Learn how to make links distinguishable](https://dequeuniversity.com/rules/axe/4.12/link-in-text-block).",
+          "score": 0,
+          "weight": 7,
+          "mode": "binary",
+          "itemCount": 1,
+          "examples": [
+            {
+              "label": "Entrar",
+              "selector": "div.home-registration-buttons > div.home-registration-register > p > a",
+              "snippet": "<a target=\"_self\" href=\"https://www.mercadolibre.com/jms/mlb/lgz/msl/login?site_id=MLB#c_id=/home/…\">",
+              "explanation": "Fix any of the following:\n  The link has insufficient color contrast of 1.57:1 with the surrounding text. (Minimum contrast is 3:1, link text: #3483fa, surrounding text: #666666)\n  The link has no styling (such as underline) to distinguish it from the surrounding text",
+              "dimensions": {
+                "width": 42,
+                "height": 23
+              }
+            }
+          ]
+        },
+        {
+          "id": "target-size",
+          "title": "Touch targets do not have sufficient size or spacing.",
+          "description": "Touch targets with sufficient size and spacing help users who may have difficulty targeting small controls to activate the targets. [Learn more about touch targets](https://dequeuniversity.com/rules/axe/4.12/target-size).",
+          "score": 0,
+          "weight": 7,
+          "mode": "binary",
+          "itemCount": 51,
+          "examples": [
+            {
+              "label": "Apple Watch",
+              "selector": "div.nav-footer-seo__wrapper > ul.nav-footer-seo__menu > li.nav-footer-seo__item > a.nav-footer-seo__link",
+              "snippet": "<a class=\"nav-footer-seo__link nav-footer-seo__link--capitalized\" href=\"https://lista.mercadolivre.com.br/apple-watch\" aria-label=\"apple watch\">",
+              "explanation": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 77.9px by 23.2px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px.",
+              "dimensions": {
+                "width": 78,
+                "height": 28
+              }
+            },
+            {
+              "label": "Ar Condicionado",
+              "selector": "div.nav-footer-seo__wrapper > ul.nav-footer-seo__menu > li.nav-footer-seo__item > a.nav-footer-seo__link",
+              "snippet": "<a class=\"nav-footer-seo__link nav-footer-seo__link--capitalized\" href=\"https://lista.mercadolivre.com.br/ar-condicionado-inverterr\" aria-label=\"ar condicionado\">",
+              "explanation": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 103.1px by 23.2px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px.",
+              "dimensions": {
+                "width": 103,
+                "height": 28
+              }
+            },
+            {
+              "label": "Ar Condicionado Inverter",
+              "selector": "div.nav-footer-seo__wrapper > ul.nav-footer-seo__menu > li.nav-footer-seo__item > a.nav-footer-seo__link",
+              "snippet": "<a class=\"nav-footer-seo__link nav-footer-seo__link--capitalized\" href=\"https://lista.mercadolivre.com.br/ar-condicionado-inverter\" aria-label=\"ar condicionado inverter\">",
+              "explanation": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 153.7px by 23.2px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22px instead of at least 24px.",
+              "dimensions": {
+                "width": 154,
+                "height": 28
+              }
+            },
+            {
+              "label": "Bicicletas",
+              "selector": "div.nav-footer-seo__wrapper > ul.nav-footer-seo__menu > li.nav-footer-seo__item > a.nav-footer-seo__link",
+              "snippet": "<a class=\"nav-footer-seo__link nav-footer-seo__link--capitalized\" href=\"https://lista.mercadolivre.com.br/bicicleta\" aria-label=\"bicicletas\">",
+              "explanation": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 58px by 23.2px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 22.2px instead of at least 24px.",
+              "dimensions": {
+                "width": 58,
+                "height": 28
+              }
+            },
+            {
+              "label": "Cafeteira",
+              "selector": "div.nav-footer-seo__wrapper > ul.nav-footer-seo__menu > li.nav-footer-seo__item > a.nav-footer-seo__link",
+              "snippet": "<a class=\"nav-footer-seo__link nav-footer-seo__link--capitalized\" href=\"https://lista.mercadolivre.com.br/cafeteira\" aria-label=\"cafeteira\">",
+              "explanation": "Fix any of the following:\n  Target has insufficient size because it is partially obscured (smallest space is 55.8px by 23.2px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.2px instead of at least 24px.",
+              "dimensions": {
+                "width": 56,
+                "height": 28
+              }
+            }
+          ]
+        },
+        {
+          "id": "focusable-controls",
+          "title": "Interactive controls are keyboard focusable",
+          "description": "Custom interactive controls are keyboard focusable and display a focus indicator. [Learn how to make custom controls focusable](https://developer.chrome.com/docs/lighthouse/accessibility/focusable-controls/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "interactive-element-affordance",
+          "title": "Interactive elements indicate their purpose and state",
+          "description": "Interactive elements, such as links and buttons, should indicate their state and be distinguishable from non-interactive elements. [Learn how to decorate interactive elements with affordance hints](https://developer.chrome.com/docs/lighthouse/accessibility/interactive-element-affordance/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "logical-tab-order",
+          "title": "The page has a logical tab order",
+          "description": "Tabbing through the page follows the visual layout. Users cannot focus elements that are offscreen. [Learn more about logical tab ordering](https://developer.chrome.com/docs/lighthouse/accessibility/logical-tab-order/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "visual-order-follows-dom",
+          "title": "Visual order on the page follows DOM order",
+          "description": "DOM order matches the visual order, improving navigation for assistive technology. [Learn more about DOM and visual ordering](https://developer.chrome.com/docs/lighthouse/accessibility/visual-order-follows-dom/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "focus-traps",
+          "title": "User focus is not accidentally trapped in a region",
+          "description": "A user can tab into and out of any control or region without accidentally trapping their focus. [Learn how to avoid focus traps](https://developer.chrome.com/docs/lighthouse/accessibility/focus-traps/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "managed-focus",
+          "title": "The user's focus is directed to new content added to the page",
+          "description": "If new content, such as a dialog, is added to the page, the user's focus is directed to it. [Learn how to direct focus to new content](https://developer.chrome.com/docs/lighthouse/accessibility/managed-focus/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "use-landmarks",
+          "title": "HTML5 landmark elements are used to improve navigation",
+          "description": "Landmark elements (`<main>`, `<nav>`, etc.) are used to improve the keyboard navigation of the page for assistive technology. [Learn more about landmark elements](https://developer.chrome.com/docs/lighthouse/accessibility/use-landmarks/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "offscreen-content-hidden",
+          "title": "Offscreen content is hidden from assistive technology",
+          "description": "Offscreen content is hidden with display: none or aria-hidden=true. [Learn how to properly hide offscreen content](https://developer.chrome.com/docs/lighthouse/accessibility/offscreen-content-hidden/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "custom-controls-labels",
+          "title": "Custom controls have associated labels",
+          "description": "Custom interactive controls have associated labels, provided by aria-label or aria-labelledby. [Learn more about custom controls and labels](https://developer.chrome.com/docs/lighthouse/accessibility/custom-controls-labels/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        },
+        {
+          "id": "custom-controls-roles",
+          "title": "Custom controls have ARIA roles",
+          "description": "Custom interactive controls have appropriate ARIA roles. [Learn how to add roles to custom controls](https://developer.chrome.com/docs/lighthouse/accessibility/custom-control-roles/).",
+          "score": null,
+          "weight": 0,
+          "mode": "manual",
+          "itemCount": 0,
+          "examples": []
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "farol-da-acessibilidade",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "extract": "node scripts/extract-lighthouse-reports.mjs",
+    "serve": "firebase emulators:start --only hosting,firestore"
+  }
+}

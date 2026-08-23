@@ -1,0 +1,164 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    // admins/{uid}
+    //   active: bool (required). Provisioned outside the client.
+    //
+    // presentation/control
+    //   sessionId: string (1..80)
+    //   voteStatus: 'closed' | 'open' | 'ended'
+    //   resultsVisible: bool
+    //   lighthouseVisible: bool
+    //   updatedAt: timestamp
+    //
+    // sessions/{sessionId}/votes/{deviceId}
+    //   name: string (1..40)
+    //   bestSite: allowed site id
+    //   worstSite: allowed and different site id
+    //   createdAt: timestamp
+    //
+    // sessions/{sessionId}/public/summary
+    //   total: int (0..100000)
+    //   best/worst: maps containing one non-negative int per site
+    //   updatedAt: timestamp
+    // ===============================================================
+
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return isAuthenticated() && request.auth.uid == uid;
+    }
+
+    function uidUnchanged(data, authUid) {
+      return !('uid' in data) || data.uid == authUid;
+    }
+
+    function uidNotModified(newData, existingData) {
+      return !('uid' in newData) || newData.uid == existingData.uid;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() &&
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.active == true;
+    }
+
+    function isAllowedSite(value) {
+      return value in ['govbr', 'mercadolivre', 'equipe'];
+    }
+
+    function validControl(data) {
+      return data.keys().hasAll([
+          'sessionId', 'voteStatus', 'resultsVisible', 'lighthouseVisible', 'updatedAt'
+        ]) &&
+        data.keys().hasOnly([
+          'sessionId', 'voteStatus', 'resultsVisible', 'lighthouseVisible', 'updatedAt'
+        ]) &&
+        data.sessionId is string &&
+        data.sessionId.size() >= 1 &&
+        data.sessionId.size() <= 80 &&
+        data.voteStatus in ['closed', 'open', 'ended'] &&
+        data.resultsVisible is bool &&
+        data.lighthouseVisible is bool &&
+        (!data.resultsVisible || data.voteStatus == 'ended') &&
+        (!data.lighthouseVisible || data.resultsVisible) &&
+        data.updatedAt is timestamp &&
+        data.updatedAt == request.time;
+    }
+
+    function validVote(data) {
+      return data.keys().hasAll(['name', 'bestSite', 'worstSite', 'createdAt']) &&
+        data.keys().hasOnly(['name', 'bestSite', 'worstSite', 'createdAt']) &&
+        data.name is string &&
+        data.name.size() >= 1 &&
+        data.name.size() <= 40 &&
+        isAllowedSite(data.bestSite) &&
+        isAllowedSite(data.worstSite) &&
+        data.bestSite != data.worstSite &&
+        data.createdAt is timestamp &&
+        data.createdAt == request.time;
+    }
+
+    function validDeviceId(deviceId) {
+      return deviceId.size() >= 16 &&
+        deviceId.size() <= 80 &&
+        deviceId.matches('^[A-Za-z0-9-]+$');
+    }
+
+    function currentSessionIsOpen(sessionId) {
+      return sessionId.size() >= 1 &&
+        sessionId.size() <= 80 &&
+        exists(/databases/$(database)/documents/presentation/control) &&
+        get(/databases/$(database)/documents/presentation/control).data.sessionId == sessionId &&
+        get(/databases/$(database)/documents/presentation/control).data.voteStatus == 'open';
+    }
+
+    function validCountMap(counts) {
+      return counts is map &&
+        counts.keys().hasAll(['govbr', 'mercadolivre', 'equipe']) &&
+        counts.keys().hasOnly(['govbr', 'mercadolivre', 'equipe']) &&
+        counts.govbr is int && counts.govbr >= 0 && counts.govbr <= 100000 &&
+        counts.mercadolivre is int && counts.mercadolivre >= 0 && counts.mercadolivre <= 100000 &&
+        counts.equipe is int && counts.equipe >= 0 && counts.equipe <= 100000;
+    }
+
+    function validSummary(data) {
+      return data.keys().hasAll(['total', 'best', 'worst', 'updatedAt']) &&
+        data.keys().hasOnly(['total', 'best', 'worst', 'updatedAt']) &&
+        data.total is int &&
+        data.total >= 0 &&
+        data.total <= 100000 &&
+        validCountMap(data.best) &&
+        validCountMap(data.worst) &&
+        data.best.govbr + data.best.mercadolivre + data.best.equipe == data.total &&
+        data.worst.govbr + data.worst.mercadolivre + data.worst.equipe == data.total &&
+        data.updatedAt is timestamp &&
+        data.updatedAt == request.time;
+    }
+
+    match /admins/{uid} {
+      allow get: if isOwner(uid);
+      allow list, create, update, delete: if false;
+    }
+
+    match /presentation/control {
+      allow get: if true;
+      allow list, delete: if false;
+      allow create: if isAdmin() &&
+        uidUnchanged(request.resource.data, request.auth.uid) &&
+        validControl(request.resource.data);
+      allow update: if isAdmin() &&
+        uidNotModified(request.resource.data, resource.data) &&
+        validControl(request.resource.data);
+    }
+
+    match /sessions/{sessionId}/votes/{deviceId} {
+      allow get, list: if isAdmin();
+      allow create: if validDeviceId(deviceId) &&
+        currentSessionIsOpen(sessionId) &&
+        validVote(request.resource.data);
+      allow update, delete: if false;
+    }
+
+    match /sessions/{sessionId}/public/summary {
+      allow get: if true;
+      allow list, delete: if false;
+      allow create: if isAdmin() &&
+        uidUnchanged(request.resource.data, request.auth.uid) &&
+        validSummary(request.resource.data);
+      allow update: if isAdmin() &&
+        uidNotModified(request.resource.data, resource.data) &&
+        validSummary(request.resource.data);
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

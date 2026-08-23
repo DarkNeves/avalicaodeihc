@@ -1,0 +1,7 @@
+A lista a seguir contém oportunidades de melhoria na acessibilidade de Google Play Store. Cada item corresponde a uma área delineada na captura de tela anexa.
+
+Itens clicáveis
+[877,117][1012,252]
+Vários itens clicável compartilham este local na tela.
+Este item clicável tem o mesmo local na tela ([877,117][1012,252]) que outros 1 itens com essas propriedades. Elementos conflitantes: View with bounds: [877,117][1012,252].
+

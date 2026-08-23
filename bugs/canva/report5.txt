@@ -1,0 +1,322 @@
+A lista a seguir contém oportunidades de melhoria na acessibilidade de Canva. Cada item corresponde a uma área delineada na captura de tela anexa.
+
+Contraste da imagem
+[216,556][357,618]
+Considere aumentar a taxa de contraste entre o primeiro plano e o plano de fundo dessa imagem.
+A taxa de contraste da imagem é 1,54. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #B2D237 e da cor de fundo #F0F2F1. Considere aumentar essa taxa para 3,00 ou mais.
+
+Contraste da imagem
+[722,556][866,618]
+Considere aumentar a taxa de contraste entre o primeiro plano e o plano de fundo dessa imagem.
+A taxa de contraste da imagem é 1,56. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #B2D237 e da cor de fundo #F5F3F2. Considere aumentar essa taxa para 3,00 ou mais.
+
+Contraste da imagem
+[64,1127][295,1189]
+Considere aumentar a taxa de contraste entre o primeiro plano e o plano de fundo dessa imagem.
+A taxa de contraste da imagem é 2,31. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #65B153 e da cor de fundo #EFF0F0. Considere aumentar essa taxa para 3,00 ou mais.
+
+Contraste da imagem
+[300,1127][773,1189]
+Considere aumentar a taxa de contraste entre o primeiro plano e o plano de fundo dessa imagem.
+A taxa de contraste da imagem é 2,40. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #65B153 e da cor de fundo #F6F4F2. Considere aumentar essa taxa para 3,00 ou mais.
+
+Contraste da imagem
+[779,1127][1015,1189]
+Considere aumentar a taxa de contraste entre o primeiro plano e o plano de fundo dessa imagem.
+A taxa de contraste da imagem é 2,27. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #65B153 e da cor de fundo #EEEEED. Considere aumentar essa taxa para 3,00 ou mais.
+
+Contraste do texto
+[61,171][407,227]
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 1,12. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #13AED0 e da cor de fundo #1CA2D2. Use cores que resultam em uma taxa de contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes.
+
+Contraste do texto
+[92,1198][697,1358]
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 2,05. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #AEAEAD e da cor de fundo #F6F6F5. Use cores que resultam em uma taxa de contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes.
+
+Contraste do texto
+[92,1395][697,1513]
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 1,92. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #B4B4B4 e da cor de fundo #F6F6F5. Use cores que resultam em uma taxa de contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes.
+
+Contraste do texto
+[92,1549][697,1625]
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 1,81. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #B3B3B2 e da cor de fundo #EEEEEE. Use cores que resultam em uma taxa de contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes.
+
+Contraste do texto
+[109,624][970,739]
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 3,03. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #359C1F e da cor de fundo #EDEDED. Use cores que resultam em uma taxa de contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes.
+
+Contraste do texto
+[399,556][680,613]
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 2,84. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #8D8D8D e da cor de fundo #EDEDED. Use cores que resultam em uma taxa de contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes.
+
+Contraste do texto
+[92,784][658,826]
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 1,94. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #ACACAC e da cor de fundo #EDEDED. Use cores que resultam em uma taxa de contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes.
+
+Contraste do texto
+[92,784][793,866]
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 1,94. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #ACACAC e da cor de fundo #EDEDED. Use cores que resultam em uma taxa de contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes.
+
+Contraste do texto
+[92,821][793,905]
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 2,03. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #A8A8A8 e da cor de fundo #EDEDED. Use cores que resultam em uma taxa de contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes.
+
+Contraste do texto
+[92,860][793,942]
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 2,10. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #A9A9A9 e da cor de fundo #F3F2F0. Use cores que resultam em uma taxa de contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes.
+
+Contraste do texto
+[92,1001][135,1043]
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 1,88. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #B1B1B0 e da cor de fundo #EFF0F0. Use cores que resultam em uma taxa de contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes.
+
+Contraste do texto
+[92,1001][987,1119]
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 1,98. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #AAAAAA e da cor de fundo #EDEDED. Use cores que resultam em uma taxa de contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes.
+
+Área de toque
+[8,104][126,219]
+Considere aumentar este item clicável.
+O tamanho deste item é 42dp x 41dp. Considere aumentar a largura em 48dp e a altura em 48dp ou mais nesta área de toque. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[953,104][1071,219]
+Considere aumentar este item clicável.
+O tamanho deste item é 42dp x 41dp. Considere aumentar a largura em 48dp e a altura em 48dp ou mais nesta área de toque. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+LBpzjcXN6709mkJW
+Considere aumentar este item clicável.
+A altura deste item é 2dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[14,556][213,618]
+Considere aumentar este item clicável.
+A altura deste item é 22dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+LB48Pv0RH8qbTSCt
+Considere aumentar este item clicável.
+O tamanho deste item é 23dp x 15dp. Considere aumentar a largura em 48dp e a altura em 48dp ou mais nesta área de toque. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+LB4PGyJkHLmPJSNd
+Considere aumentar este item clicável.
+O tamanho deste item é 30dp x 2dp. Considere aumentar a largura em 48dp e a altura em 48dp ou mais nesta área de toque. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[216,556][357,618]
+Considere aumentar este item clicável.
+A altura deste item é 22dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+LBXvhFC13TnpTRCc
+Considere aumentar este item clicável.
+O tamanho deste item é 30dp x 2dp. Considere aumentar a largura em 48dp e a altura em 48dp ou mais nesta área de toque. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[722,556][866,618]
+Considere aumentar este item clicável.
+A altura deste item é 22dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+LBQ4JxCr02KbCF0w
+Considere aumentar este item clicável.
+O tamanho deste item é 24dp x 15dp. Considere aumentar a largura em 48dp e a altura em 48dp ou mais nesta área de toque. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+LBLJT64H3ZrQZw6J
+Considere aumentar este item clicável.
+A altura deste item é 2dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[866,556][1068,618]
+Considere aumentar este item clicável.
+A altura deste item é 22dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+LBMWXQyzNQVkDJqh
+Considere aumentar este item clicável.
+A altura deste item é 30dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+LB17kjpZMHW1XSzd
+Considere aumentar este item clicável.
+A altura deste item é 15dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+LBctsm4gvFCjst70
+Considere aumentar este item clicável.
+A altura deste item é 2dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[64,1127][295,1189]
+Considere aumentar este item clicável.
+A altura deste item é 22dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+LBtV2TZNtWTR8Th5
+Considere aumentar este item clicável.
+O tamanho deste item é 13dp x 13dp. Considere aumentar a largura em 48dp e a altura em 48dp ou mais nesta área de toque. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+LBTqWmf6JDWqNySz
+Considere aumentar este item clicável.
+A altura deste item é 2dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[300,1127][773,1189]
+Considere aumentar este item clicável.
+A altura deste item é 22dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+LBmc6tmlmHFx7RBF
+Considere aumentar este item clicável.
+O tamanho deste item é 12dp x 13dp. Considere aumentar a largura em 48dp e a altura em 48dp ou mais nesta área de toque. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+LBWP1R4zPmXRk5fN
+Considere aumentar este item clicável.
+A altura deste item é 2dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[779,1127][1015,1189]
+Considere aumentar este item clicável.
+A altura deste item é 22dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+LB7dXNY4Z10BX5qN
+Considere aumentar este item clicável.
+A altura deste item é 8dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[45,506][1035,528]
+Considere aumentar este item clicável.
+A altura deste item é 8dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[45,506][1035,528]
+Considere aumentar este item clicável.
+A altura deste item é 8dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+LBHgzMv8dNSWshHD
+Considere aumentar este item clicável.
+A altura deste item é 4dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[45,1822][1080,1833]
+Considere aumentar este item clicável.
+A altura deste item é 4dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[45,1822][1080,1833]
+Considere aumentar este item clicável.
+A altura deste item é 4dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+LBRSfP7G0j2dfMvq
+Considere aumentar este item clicável.
+O tamanho deste item é 25dp x 25dp. Considere aumentar a largura em 48dp e a altura em 48dp ou mais nesta área de toque. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[92,1198][239,1243]
+Considere aumentar este item clicável.
+A altura deste item é 16dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+LBNcwYPDk372vJ1b
+Considere aumentar este item clicável.
+A altura deste item é 40dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[92,1395][697,1513]
+Considere aumentar este item clicável.
+A altura deste item é 42dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+LB8YjVx6JfCJHHtB
+Considere aumentar este item clicável.
+A altura deste item é 25dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[92,1549][697,1625]
+Considere aumentar este item clicável.
+A altura deste item é 27dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+LBhmt5PP3VCb0ySZ
+Considere aumentar este item clicável.
+A altura deste item é 34dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[109,624][970,739]
+Considere aumentar este item clicável.
+A altura deste item é 41dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+LBpp94v9bpxXN4nK
+Considere aumentar este item clicável.
+A altura deste item é 18dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[399,556][680,613]
+Considere aumentar este item clicável.
+A altura deste item é 20dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[92,784][658,826]
+Considere aumentar este item clicável.
+A altura deste item é 15dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[92,784][793,866]
+Considere aumentar este item clicável.
+A altura deste item é 29dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[92,821][793,905]
+Considere aumentar este item clicável.
+A altura deste item é 30dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[92,860][793,942]
+Considere aumentar este item clicável.
+A altura deste item é 29dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[92,900][793,981]
+Considere aumentar este item clicável.
+A altura deste item é 29dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+LBVmwmTXlfTV0vxx
+Considere aumentar este item clicável.
+A altura deste item é 40dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[92,1001][135,1043]
+Considere aumentar este item clicável.
+O tamanho deste item é 15dp x 15dp. Considere aumentar a largura em 48dp e a altura em 48dp ou mais nesta área de toque. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[92,1001][987,1119]
+Considere aumentar este item clicável.
+A altura deste item é 42dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+LB0zc1q0ksFMxqK5
+Considere aumentar este item clicável.
+O tamanho deste item é 25dp x 24dp. Considere aumentar a largura em 48dp e a altura em 48dp ou mais nesta área de toque. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+

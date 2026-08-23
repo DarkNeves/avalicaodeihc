@@ -1,0 +1,32 @@
+A lista a seguir contém oportunidades de melhoria na acessibilidade de Uber. Cada item corresponde a uma área delineada na captura de tela anexa.
+
+Contraste do texto
+[161,512][282,552]
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 3,45. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #DEDEDE e da cor de fundo #E32500. Use cores que resultam em uma taxa de contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes. Este item pode estar coberto por outro conteúdo na tela. Considere testar manualmente o contraste deste item.
+
+Contraste do texto
+[829,512][932,552]
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 3,45. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #DEDEDE e da cor de fundo #E32500. Use cores que resultam em uma taxa de contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes. Este item pode estar coberto por outro conteúdo na tela. Considere testar manualmente o contraste deste item.
+
+Contraste do texto
+[116,847][196,887]
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 3,45. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #DEDEDE e da cor de fundo #E32500. Use cores que resultam em uma taxa de contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes. Este item pode estar coberto por outro conteúdo na tela. Considere testar manualmente o contraste deste item.
+
+Contraste do texto
+[913,847][979,887]
+Considere aumentar a taxa de contraste do primeiro plano e do plano de fundo do texto neste item.
+A taxa de contraste do texto no item é 3,45. Essa taxa baseia-se em uma estimativa da cor do primeiro plano #DEDEDE e da cor de fundo #E32500. Use cores que resultam em uma taxa de contraste maior que 4,50 para textos pequenos ou 3,00 para textos grandes. Este item pode estar coberto por outro conteúdo na tela. Considere testar manualmente o contraste deste item.
+
+Tipo de item não aceito
+[0,2059][1080,2340]
+O tipo deste item pode não ser compatível.
+O tipo deste item com.uber.rib.core.compose.root.UberComposeView pode não ser processado pelos serviços de acessibilidade. Use um tipo definido pelo SDK do Android.
+
+Descrições de itens
+com.ubercab:id/collapsing_toolbar
+Vários itens têm a mesma descrição.
+O texto falado deste item não clicável: "Opções" é idêntico a outros 1 itens.
+

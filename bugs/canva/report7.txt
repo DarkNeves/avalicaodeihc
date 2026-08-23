@@ -1,0 +1,37 @@
+A lista a seguir contém oportunidades de melhoria na acessibilidade de Canva. Cada item corresponde a uma área delineada na captura de tela anexa.
+
+Área de toque
+[407,126][1057,241]
+Considere aumentar este item clicável.
+A altura deste item é 41dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[953,272][1080,399]
+Considere aumentar este item clicável.
+A altura deste item é 45dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[857,610][1035,725]
+Considere aumentar este item clicável.
+A altura deste item é 41dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[393,795][464,866]
+Considere aumentar este item clicável.
+O tamanho deste item é 25dp x 25dp. Considere aumentar a largura em 48dp e a altura em 48dp ou mais nesta área de toque. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[883,795][953,866]
+Considere aumentar este item clicável.
+O tamanho deste item é 25dp x 25dp. Considere aumentar a largura em 48dp e a altura em 48dp ou mais nesta área de toque. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[953,1020][1080,1147]
+Considere aumentar este item clicável.
+A altura deste item é 45dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
+Área de toque
+[953,1684][1080,1811]
+Considere aumentar este item clicável.
+A altura deste item é 45dp. Considere definir a altura desta área de toque como 48dp ou maior. Como este item é originado de conteúdo da Web, recomendamos uma verificação adicional de tamanho da área de toque.
+
