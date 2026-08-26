@@ -305,6 +305,60 @@ tr:nth-child(n+13):nth-child(-n+16) td:not(.participant-name-cell) {
 /* ============================================
    13. Mobile overrides
    ============================================ */
+@media (max-width: 860px) {
+  /*
+   * The shared stylesheet turns every table into cards on small screens.
+   * This table uses rowspan to group participants, so it must keep its
+   * native table layout and scroll horizontally instead.
+   */
+  #resultados .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #resultados .table-responsive table {
+    display: table;
+    width: 100%;
+    min-width: 580px;
+  }
+
+  #resultados .table-responsive thead {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: initial;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    border: initial;
+  }
+
+  #resultados .table-responsive tbody {
+    display: table-row-group;
+  }
+
+  #resultados .table-responsive tbody tr {
+    display: table-row;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  #resultados .table-responsive tbody td {
+    display: table-cell;
+    padding: 0.85rem 1rem;
+    text-align: left;
+  }
+
+  #resultados .table-responsive tbody td::before {
+    display: none;
+    content: none;
+  }
+}
+
 @media (max-width: 768px) {
   .site-nav { display: none; }
   .hero { padding-top: 0; padding-bottom: 2rem; }
